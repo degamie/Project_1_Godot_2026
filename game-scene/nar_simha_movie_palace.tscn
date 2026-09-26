@@ -29,14 +29,14 @@ transform = Transform3D(1, 0, 0, 0, 3.4118116, 0, 0, 0, 1, 0, 0.037483215, 0)
 shape = SubResource("BoxShape3D_j2o6x")
 
 [node name="Hall_Ceiling" parent="." index="91" unique_id=1983677895]
-transform = Transform3D(2.5707302, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 5.5081506, 0)
+transform = Transform3D(4.209903, 0, 0, 0, -1, 1.4097108e-07, 0, -8.742278e-08, -1.6125212, 0, 5.5081506, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Hall_Ceiling" index="0" unique_id=848366233]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.551604, 1.1788635, -2.7028227)
 physics_material_override = SubResource("PhysicsMaterial_dfuki")
 
 [node name="Hall_Floor" parent="." index="93" unique_id=1724195935]
-transform = Transform3D(2.5457401, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(3.7667859, 0, 0, 0, 1, 0, 0, 0, 1.3794109, 0, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Hall_Floor" index="0" unique_id=1479345882]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5709437, 0, -2.8173742)
