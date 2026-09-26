@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://df3uqrmectr83"]
+
+[ext_resource type="PackedScene" uid="uid://c1g1oub6hsbgc" path="res://game-scene/mdl/NarSimha_Movie_palace.blend" id="1_ea73i"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_j2o6x"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j2o6x"]
+size = Vector3(1, 1.4526367, 1)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dfuki"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qby1c"]
+
+[node name="NarSimha_Movie_palace" unique_id=860587034 instance=ExtResource("1_ea73i")]
+
+[node name="brazier_flame" parent="." index="13" unique_id=1389888853]
+transform = Transform3D(31.241074, 0, 0, 0, 23.567226, 0, 0, 0, 23.614292, -63.485573, -4.146855, -154.29631)
+
+[node name="ground" parent="." index="88" unique_id=477262552]
+transform = Transform3D(942.2929, 0, 0, 0, 6.730664, 0, 0, 0, 942.2929, 0.7568807, -83.26566, 24.574165)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ground" index="0" unique_id=1852797638]
+transform = Transform3D(58.35232, 0, 0, 0, 1, 0, 0, 0, 75.35407, 0, 7.6193423, 0)
+input_capture_on_drag = true
+physics_material_override = SubResource("PhysicsMaterial_j2o6x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hall_BackWall" parent_id_path=PackedInt32Array(903824640) index="0" unique_id=1513684429]
+transform = Transform3D(1, 0, 0, 0, 3.4118116, 0, 0, 0, 1, 0, 0.037483215, 0)
+shape = SubResource("BoxShape3D_j2o6x")
+
+[node name="Hall_Ceiling" parent="." index="91" unique_id=1983677895]
+transform = Transform3D(2.5707302, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 5.5081506, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Hall_Ceiling" index="0" unique_id=848366233]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.551604, 1.1788635, -2.7028227)
+physics_material_override = SubResource("PhysicsMaterial_dfuki")
+
+[node name="Hall_Floor" parent="." index="93" unique_id=1724195935]
+transform = Transform3D(2.5457401, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Hall_Floor" index="0" unique_id=1479345882]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5709437, 0, -2.8173742)
+physics_material_override = SubResource("PhysicsMaterial_qby1c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pillar_0_abacus" parent_id_path=PackedInt32Array(1508909009) index="0" unique_id=431083023]
+transform = Transform3D(1, 0, 0, 0, 3.4118116, 0, 0, 0, 1, 0, 0.037483215, 0)
+shape = SubResource("BoxShape3D_j2o6x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pillar_0_shaft" parent_id_path=PackedInt32Array(1218661166) index="0" unique_id=1396647062]
+transform = Transform3D(1, 0, 0, 0, 3.4118116, 0, 0, 0, 1, 0, 0.037483215, 0)
+shape = SubResource("BoxShape3D_j2o6x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pillar_1_base" parent_id_path=PackedInt32Array(1519690730) index="0" unique_id=1586008567]
+transform = Transform3D(1, 0, 0, 0, 3.4118116, 0, 0, 0, 1, 0, 0.037483215, 0)
+shape = SubResource("BoxShape3D_j2o6x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pillar_1_shaft" parent_id_path=PackedInt32Array(1373402292) index="0" unique_id=223687102]
+transform = Transform3D(1, 0, 0, 0, 3.4118116, 0, 0, 0, 1, 0, 0.037483215, 0)
+shape = SubResource("BoxShape3D_j2o6x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pillar_2_base" parent_id_path=PackedInt32Array(576479335) index="0" unique_id=53372498]
+transform = Transform3D(1, 0, 0, 0, 3.4118116, 0, 0, 0, 1, 0, 0.037483215, 0)
+shape = SubResource("BoxShape3D_j2o6x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pillar_2_shaft" parent_id_path=PackedInt32Array(569172660) index="0" unique_id=878887675]
+transform = Transform3D(1, 0, 0, 0, 3.4118116, 0, 0, 0, 1, 0, 0.037483215, 0)
+shape = SubResource("BoxShape3D_j2o6x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pillar_3_shaft" parent_id_path=PackedInt32Array(26220638) index="0" unique_id=16386528]
+transform = Transform3D(1, 0, 0, 0, 3.4118116, 0, 0, 0, 1, 0, 0.037483215, 0)
+shape = SubResource("BoxShape3D_j2o6x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pillar_4_base" parent_id_path=PackedInt32Array(1268187807) index="0" unique_id=1080384383]
+transform = Transform3D(1, 0, 0, 0, 3.4118116, 0, 0, 0, 1, 0, 0.037483215, 0)
+shape = SubResource("BoxShape3D_j2o6x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pillar_4_shaft" parent_id_path=PackedInt32Array(343361352) index="0" unique_id=1399373352]
+transform = Transform3D(1, 0, 0, 0, 3.4118116, 0, 0, 0, 1, 0, 0.037483215, 0)
+shape = SubResource("BoxShape3D_j2o6x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pillar_5_base" parent_id_path=PackedInt32Array(2013626143) index="0" unique_id=585767154]
+transform = Transform3D(1, 0, 0, 0, 3.4118116, 0, 0, 0, 1, 0, 0.037483215, 0)
+shape = SubResource("BoxShape3D_j2o6x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pillar_5_shaft" parent_id_path=PackedInt32Array(356944066) index="0" unique_id=87701027]
+transform = Transform3D(1, 0, 0, 0, 3.4118116, 0, 0, 0, 1, 0, 0.037483215, 0)
+shape = SubResource("BoxShape3D_j2o6x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Throne_Arch" parent_id_path=PackedInt32Array(2024728629) index="0" unique_id=2042583323]
+transform = Transform3D(1, 0, 0, 0, 3.4118116, 0, 0, 0, 1, 0, 0.037483215, 0)
+shape = SubResource("BoxShape3D_j2o6x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Throne_ArmKnob_1" parent_id_path=PackedInt32Array(1555868986) index="0" unique_id=1266040179]
+transform = Transform3D(1, 0, 0, 0, 3.4118116, 0, 0, 0, 1, 0, 0.037483215, 0)
+shape = SubResource("BoxShape3D_j2o6x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Throne_ArmKnob_-1" parent_id_path=PackedInt32Array(1838807370) index="0" unique_id=18598128]
+transform = Transform3D(1, 0, 0, 0, 3.4118116, 0, 0, 0, 1, 0, 0.037483215, 0)
+shape = SubResource("BoxShape3D_j2o6x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Throne_Back" parent_id_path=PackedInt32Array(1320430446) index="0" unique_id=2093239101]
+transform = Transform3D(1, 0, 0, 0, 3.4118116, 0, 0, 0, 1, 0, 0.037483215, 0)
+shape = SubResource("BoxShape3D_j2o6x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Throne_Platform" parent_id_path=PackedInt32Array(1487229405) index="0" unique_id=635254342]
+transform = Transform3D(1, 0, 0, 0, 3.4118116, 0, 0, 0, 1, 0, 0.037483215, 0)
+shape = SubResource("BoxShape3D_j2o6x")

@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://cyy85lrygdtsj"]
+
+[ext_resource type="PackedScene" uid="uid://ds0oo3shm8tvv" path="res://game-scene/Player.tscn" id="1_ogy1v"]
+[ext_resource type="PackedScene" uid="uid://df3uqrmectr83" path="res://game-scene/nar_simha_movie_palace.tscn" id="2_ogy1v"]
+
+[sub_resource type="ProceduralSkyMaterial" id="SkyMat"]
+sky_top_color = Color(0.25, 0.28, 0.45, 1)
+sky_horizon_color = Color(0.95, 0.55, 0.35, 1)
+ground_bottom_color = Color(0.15, 0.12, 0.12, 1)
+ground_horizon_color = Color(0.85, 0.5, 0.32, 1)
+ground_curve = 0.15
+
+[sub_resource type="Sky" id="Sky1"]
+sky_material = SubResource("SkyMat")
+
+[sub_resource type="Environment" id="Env1"]
+background_mode = 2
+sky = SubResource("Sky1")
+fog_enabled = true
+fog_light_color = Color(1, 0.66, 0.45, 1)
+fog_density = 0.02
+fog_sky_affect = 0.4
+
+[sub_resource type="BoxShape3D" id="FloorShape"]
+size = Vector3(20, 1, 20)
+
+[sub_resource type="StandardMaterial3D" id="FloorMat"]
+albedo_color = Color(0.42, 0.38, 0.34, 1)
+
+[sub_resource type="BoxMesh" id="FloorMesh"]
+material = SubResource("FloorMat")
+size = Vector3(20, 1, 20)
+
+[sub_resource type="BoxShape3D" id="WallShapeNS"]
+size = Vector3(20, 6, 1)
+
+[sub_resource type="StandardMaterial3D" id="WallMat"]
+albedo_color = Color(0.78, 0.72, 0.62, 1)
+
+[sub_resource type="BoxMesh" id="WallMeshNS"]
+material = SubResource("WallMat")
+size = Vector3(20, 6, 1)
+
+[sub_resource type="BoxShape3D" id="WallShapeEW"]
+size = Vector3(1, 6, 20)
+
+[sub_resource type="BoxMesh" id="WallMeshEW"]
+material = SubResource("WallMat")
+size = Vector3(1, 6, 20)
+
+[node name="GameScene" type="Node3D" unique_id=913055358]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=947935628]
+environment = SubResource("Env1")
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=502765615]
+transform = Transform3D(-0.8660254, -0.21130916, 0.45315394, 0, 0.90630776, 0.42261827, -0.50000006, 0.36599815, -0.7848855, 0, 0, 0)
+light_color = Color(0.47711396, 0.7685884, 0.915689, 1)
+light_energy = 1.3
+shadow_enabled = true
+
+[node name="Room" type="Node3D" parent="." unique_id=389310162]
+
+[node name="Floor" type="StaticBody3D" parent="Room" unique_id=1384131690]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/Floor" unique_id=738862608]
+shape = SubResource("FloorShape")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Room/Floor" unique_id=710577085]
+visible = false
+mesh = SubResource("FloorMesh")
+
+[node name="WallNorth" type="StaticBody3D" parent="Room" unique_id=1643536492]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -10)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/WallNorth" unique_id=1756658929]
+shape = SubResource("WallShapeNS")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Room/WallNorth" unique_id=65750415]
+mesh = SubResource("WallMeshNS")
+
+[node name="WallSouth" type="StaticBody3D" parent="Room" unique_id=1432864349]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 10)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/WallSouth" unique_id=980706876]
+shape = SubResource("WallShapeNS")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Room/WallSouth" unique_id=934620203]
+mesh = SubResource("WallMeshNS")
+
+[node name="WallEast" type="StaticBody3D" parent="Room" unique_id=1563693011]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 3, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/WallEast" unique_id=1312151135]
+shape = SubResource("WallShapeEW")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Room/WallEast" unique_id=691915730]
+mesh = SubResource("WallMeshEW")
+
+[node name="WallWest" type="StaticBody3D" parent="Room" unique_id=909487743]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 3, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/WallWest" unique_id=1265100423]
+shape = SubResource("WallShapeEW")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Room/WallWest" unique_id=1705534096]
+mesh = SubResource("WallMeshEW")
+
+[node name="Player" parent="." unique_id=1097412986 instance=ExtResource("1_ogy1v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5091306, 0)
+
+[node name="NarSimha_Movie_palace" parent="." unique_id=860587034 instance=ExtResource("2_ogy1v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.2303715, 0.22565341, 0.092853785, 1.599431)
