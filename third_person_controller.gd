@@ -1,4 +1,4 @@
-#//WID(27/9/2026)(Sarthak Mittal(DegamieSign)(ThirdPersonController(jump(ability)#1.1
+#//WID(28/9/2026)(Sarthak Mittal(DegamieSign)(ThirdPersonController(jump(ability)#1.1
 extends CharacterBody3D
 ## Third-person controller: WASD/arrow movement relative to the camera
 ## (so the player can walk toward any part of the room, in any direction
@@ -23,7 +23,7 @@ extends CharacterBody3D
 @export var base_speed: float =7.9
 @export var E_speed: float = 26
 @export var jump_velocity: float = 5.79
-@export var turn_speed: float = 12.0  # how fast the model turns to face movement
+@export var turn_speed: float = 16.567 # how fast the model turns to face movement
 
 @export_group("Camera")
 @export var min_pitch_deg: float = -60.0
@@ -53,8 +53,8 @@ func _ready() -> void:
 	capture_mouse()
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.pressed and event.button_index == input_left:
-	#if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+
 		capture_mouse()
 	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
 		release_mouse()
@@ -98,8 +98,7 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_toward(velocity.x, 0, move_speed)
 			velocity.z = move_toward(velocity.z, 0, move_speed)
 	else:
-		velocity.x = 0
-		velocity.z = 0
+		velocity.x = 0;velocity.z = 0
 
 	move_and_slide()
 
