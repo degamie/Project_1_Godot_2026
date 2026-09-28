@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://ds0oo3shm8tvv"]
+
+[ext_resource type="Script" uid="uid://blj2qamvc7dbq" path="res://src/third_person_controller.gd" id="1_mp36r"]
+[ext_resource type="PackedScene" uid="uid://bmrt36kxve1q0" path="res://game-scene/mdl/Praladha_mdl_alpha.fbx" id="2_o6fqq"]
+
+[sub_resource type="CapsuleShape3D" id="PlayerCapsule"]
+radius = 0.4
+height = 1.8
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_o6fqq"]
+resource_local_to_scene = true
+
+[node name="Player" type="CharacterBody3D" unique_id=1097412986]
+safe_margin = 0.015
+script = ExtResource("1_mp36r")
+
+[node name="CameraPivot" type="Node3D" parent="." unique_id=455197275]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot" unique_id=971108731]
+transform = Transform3D(-1, 2.262668e-08, -8.444392e-08, 0, 0.9659258, 0.25881904, 8.742278e-08, 0.25881904, -0.9659258, 0, 0, 0)
+spring_length = 4.5
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D" unique_id=1831444819]
+current = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1068128706]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.028303742, 0.9, 0)
+shape = SubResource("PlayerCapsule")
+
+[node name="CharacterModel" type="MeshInstance3D" parent="." unique_id=1937392900]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.28901887, 0.9, 0)
+transparency = 1.0
+mesh = SubResource("CapsuleMesh_o6fqq")
+
+[node name="Praladha_mdl_alpha" parent="CharacterModel" unique_id=817347016 instance=ExtResource("2_o6fqq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.36697054, -0.9, 0)

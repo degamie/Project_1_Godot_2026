@@ -27,7 +27,7 @@ extends CharacterBody3D
 
 @export_group("Camera")
 @export var min_pitch_deg: float = -60.0
-@export var max_pitch_deg: float = 25.0
+@export var max_pitch_deg: float = 26
 
 @export_group("Input Actions")
 @export var input_forward: String = "ui_up"
