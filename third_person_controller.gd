@@ -1,4 +1,4 @@
-#//WID(28/9/2026)(Sarthak Mittal(DegamieSign)(ThirdPersonController(jump(ability)#1.1
+#//WID(29/9/2026)(Sarthak Mittal(DegamieSign)(ThirdPersonController(jump(ability)#1.1
 extends CharacterBody3D
 ## Third-person controller: WASD/arrow movement relative to the camera
 ## (so the player can walk toward any part of the room, in any direction
@@ -21,7 +21,7 @@ extends CharacterBody3D
 @export_group("Speeds")
 @export var look_speed: float = .005
 @export var base_speed: float =7.9
-@export var E_speed: float = 26
+@export var E_speed: float = 29
 @export var jump_velocity: float =10
 @export var turn_speed: float = 16.567 # how fast the model turns to face movement
 
