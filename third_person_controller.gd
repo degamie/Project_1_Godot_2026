@@ -19,11 +19,11 @@ extends CharacterBody3D
 @export var can_E: bool = true
 
 @export_group("Speeds")
-@export var look_speed: float = .005
+@export var look_speed: float = .006
 @export var base_speed: float =7.9
 @export var E_speed: float = 29
-@export var jump_velocity: float =10
-@export var turn_speed: float = 16.567 # how fast the model turns to face movement
+@export var jump_velocity: float =12
+@export var turn_speed: float = 10 # how fast the model turns to face movement
 
 @export_group("Camera")
 @export var min_pitch_deg: float = -60.0
