@@ -22,7 +22,7 @@ extends CharacterBody3D
 @export var look_speed: float = .006
 @export var base_speed: float =7.9
 @export var E_speed: float = 29
-@export var jump_velocity: float =12
+@export var jump_velocity: float =5
 @export var turn_speed: float = 10 # how fast the model turns to face movement
 
 @export_group("Camera")
@@ -39,7 +39,7 @@ extends CharacterBody3D
 @export var input_E: String = "E"  # optional; safely disabled if not mapped
 
 var mouse_captured: bool = false
-var move_speed: float = 0.0
+var move_speed: float = 1
 
 @onready var camera_pivot: Node3D = $CameraPivot
 @onready var spring_arm: SpringArm3D = $CameraPivot/SpringArm3D
