@@ -19,7 +19,7 @@ extends CharacterBody3D
 @export var can_E: bool = true
 
 @export_group("Speeds")
-@export var look_speed: float = .009
+@export var look_speed: float = .0075
 @export var base_speed: float =12.5
 @export var E_speed: float =50
 @export var jump_velocity: float =9
