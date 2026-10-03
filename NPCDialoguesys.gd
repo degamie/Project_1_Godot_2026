@@ -1,10 +1,12 @@
-#WID(3/10/2026)(Sarthak Mittal)(DegamieSign)(NPCDialogueSystem)
+#WID(3/10/2026)(Sarthak Mittal)(DegamieSign)(NPCDialogueSystem)1
 class_name NPCDiaglogue extends CanvasLayer
 signal dialogue_finished # Emitted when the chat ends
 @onready var name_label:Label=$Panel/NameLabel
 
 @onready var text_label: RichTextLabel = $Panel/RichTextLabel
-var curr_lines:Array[String]=[]
+var curr_lines:Array[String]=[{
+	"npcname":"Praladha","text":"Jai Vasudev";
+}]
 var is_active:bool=false
 var indx_lines:int=0
 #@export_group("Dialogues",FileDialog)
