@@ -1,9 +1,7 @@
 [gd_scene format=3 uid="uid://dub3my887gcyw"]
 
 [ext_resource type="Script" uid="uid://blj2qamvc7dbq" path="res://src/third_person_controller.gd" id="1_mp36r"]
-[ext_resource type="Script" uid="uid://u4cvlgvix171" path="res://src/DialogueResource.gd" id="2_7tngg"]
 [ext_resource type="PackedScene" uid="uid://bmrt36kxve1q0" path="res://game-scene/mdl/Praladha_mdl_alpha.fbx" id="2_o6fqq"]
-[ext_resource type="Script" uid="uid://bhdtshkgssk2y" path="res://src/NPCDialoguesys.gd" id="4_mey51"]
 [ext_resource type="Script" uid="uid://dxdoo0btj8pg1" path="res://game-scene/mdl/dialogue_scripting.torch" id="5_jruo6"]
 
 [sub_resource type="CapsuleShape3D" id="PlayerCapsule"]
@@ -39,13 +37,12 @@ mesh = SubResource("CapsuleMesh_o6fqq")
 [node name="Praladha_mdl_alpha" parent="CharacterModel" unique_id=817347016 instance=ExtResource("2_o6fqq")]
 
 [node name="ResourcePreloader" type="ResourcePreloader" parent="." unique_id=630999965]
-script = ExtResource("2_7tngg")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1384792731]
 follow_viewport_enabled = true
-script = ExtResource("4_mey51")
 
 [node name="EditorScriptPicker" type="EditorScriptPicker" parent="." unique_id=423588513]
 offset_right = 52.0
 offset_bottom = 31.0
+offset_transform_enabled = true
 script = ExtResource("5_jruo6")

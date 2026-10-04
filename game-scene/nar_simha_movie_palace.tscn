@@ -193,7 +193,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6, 6.0341225, -2)
 visible = false
 
 [node name="Pillar_0_shaft" parent="." index="144" unique_id=1218661166]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6, 2.6, 0.45532608)
+transform = Transform3D(1, 0, 0, 0, 2.0461779, 0, 0, 0, 1, -2.6, 4.22495, 0.45532608)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Pillar_0_shaft" index="0" unique_id=1396647062]
 transform = Transform3D(1, 0, 0, 0, 3.4118116, 0, 0, 0, 1, 0, 0.037483215, 0)
@@ -218,7 +218,7 @@ transform = Transform3D(1, 0, 0, 0, 1.606187, 0, 0, 0, 1, -5.176682, 1.6180325, 
 mesh = SubResource("ArrayMesh_kou4t")
 
 [node name="Pillar_1_capital" type="MeshInstance3D" parent="Pillar_1_shaft/Pillar_1_capital" index="0" unique_id=233692716]
-transform = Transform3D(1, 0, 0, 0, 1.606187, 0, 0, 0, 1, -5.176682, 1.6180325, 0.050233364)
+transform = Transform3D(0.9999999, 0, 0, 0, 1.6061867, 0, 0, 0, 0.9999999, 0.1913333, 0.6067593, 0.050233364)
 mesh = SubResource("ArrayMesh_kou4t")
 
 [node name="Pillar_1_shaft" type="MeshInstance3D" parent="Pillar_1_shaft/Pillar_1_capital" index="1" unique_id=1671010679]
