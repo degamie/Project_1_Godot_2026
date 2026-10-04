@@ -1,7 +1,9 @@
-[gd_scene format=3 uid="uid://ds0oo3shm8tvv"]
+[gd_scene format=3 uid="uid://dub3my887gcyw"]
 
 [ext_resource type="Script" uid="uid://blj2qamvc7dbq" path="res://src/third_person_controller.gd" id="1_mp36r"]
+[ext_resource type="Script" uid="uid://u4cvlgvix171" path="res://src/DialogueResource.gd" id="2_7tngg"]
 [ext_resource type="PackedScene" uid="uid://bmrt36kxve1q0" path="res://game-scene/mdl/Praladha_mdl_alpha.fbx" id="2_o6fqq"]
+[ext_resource type="Script" uid="uid://bhdtshkgssk2y" path="res://src/NPCDialoguesys.gd" id="4_mey51"]
 
 [sub_resource type="CapsuleShape3D" id="PlayerCapsule"]
 radius = 0.4
@@ -25,16 +27,21 @@ spring_length = 4.5
 current = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1068128706]
-transform = Transform3D(1.9054178, 0, 0, 0, 1.1901523, 0, 0, 0, 1.9878675, -0.028303742, 0.7213107, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 shape = SubResource("PlayerCapsule")
 
 [node name="CharacterModel" type="MeshInstance3D" parent="." unique_id=1937392900]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.28901887, 0.9, 0)
-top_level = true
 transparency = 1.0
 cast_shadow = 0
 mesh = SubResource("CapsuleMesh_o6fqq")
 
 [node name="Praladha_mdl_alpha" parent="CharacterModel" unique_id=817347016 instance=ExtResource("2_o6fqq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07795167, 0, 0)
-top_level = true
+
+[node name="ResourcePreloader" type="ResourcePreloader" parent="." unique_id=630999965]
+script = ExtResource("2_7tngg")
+dialogue_lines = null
+speaker_name = null
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1384792731]
+follow_viewport_enabled = true
+script = ExtResource("4_mey51")
