@@ -1,4 +1,4 @@
-[orchestration type="OScript" load_steps=9 format=4 uid="uid://dxdoo0btj8pg1"]
+[orchestration type="OScript" load_steps=10 format=4 uid="uid://dxdoo0btj8pg1"]
 
 [obj type="OScriptFunction" id="OScriptFunction_ph4bv"]
 guid = "28F35A75-AD6B-485E-A206-DA539DB08D95"
@@ -18,7 +18,7 @@ id = 6
 [obj type="OScriptGraph" id="OScriptGraph_10o0e"]
 graph_name = &"EventGraph"
 flags = 8
-nodes = Array[int]([6, 7, 8, 9, 10, 11])
+nodes = Array[int]([6, 7, 8, 9, 10, 11, 12])
 functions = Array[int]([6])
 
 [obj type="OScriptNodeEvent" id="OScriptNodeEvent_gja7p"]
@@ -42,7 +42,7 @@ pin_data = Array[Dictionary]([{
 [obj type="OScriptNodeDialogueMessage" id="OScriptNodeDialogueMessage_qkyiu"]
 id = 7
 size = Vector2(407, 320)
-position = Vector2(1640, 60)
+position = Vector2(1400, -380)
 pin_data = Array[Dictionary]([{
 "pin_name": &"ExecIn",
 "flags": 4
@@ -138,7 +138,7 @@ method = {
 chain = false
 id = 9
 size = Vector2(208, 76)
-position = Vector2(400, 60)
+position = Vector2(420, -580)
 pin_data = Array[Dictionary]([{
 "pin_name": &"target",
 "type": 24,
@@ -179,7 +179,7 @@ pin_data = Array[Dictionary]([{
 [obj type="OScriptNodeDialogueMessage" id="OScriptNodeDialogueMessage_wn330"]
 id = 11
 size = Vector2(407, 320)
-position = Vector2(2120, 220)
+position = Vector2(2716, -308)
 pin_data = Array[Dictionary]([{
 "pin_name": &"ExecIn",
 "flags": 4
@@ -195,12 +195,13 @@ pin_data = Array[Dictionary]([{
 "type": 4,
 "flags": 16777218,
 "label": "Message",
+"dv": "Blessings to Praladha ",
 "hint": 18
 }, {
 "pin_name": &"scene",
 "type": 4,
 "flags": 8388610,
-"dv": "",
+"dv": "res://game-scene/GameScene.tscn",
 "hint": 13,
 "hint_string": "*.scn,*.tscn; Scene Files"
 }, {
@@ -209,10 +210,65 @@ pin_data = Array[Dictionary]([{
 "flags": 4
 }])
 
+[obj type="OScriptNodeDialogueMessage" id="OScriptNodeDialogueMessage_7tngg"]
+id = 12
+size = Vector2(407, 320)
+position = Vector2(2058, -294)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"name",
+"type": 4,
+"flags": 16777218,
+"label": "Speaker",
+"dv": "Praladha",
+"hint": 18
+}, {
+"pin_name": &"text",
+"type": 4,
+"flags": 16777218,
+"label": "Message",
+"dv": "Jai Shri Rama",
+"hint": 18
+}, {
+"pin_name": &"scene",
+"type": 4,
+"flags": 8388610,
+"dv": "res://game-scene/GameScene.tscn",
+"hint": 13,
+"hint_string": "*.scn,*.tscn; Scene Files"
+}, {
+"pin_name": &"choice_0",
+"type": 24,
+"flags": 10,
+"target_class": "OScriptNodeDialogueChoice"
+}, {
+"pin_name": &"temp_0",
+"dir": 1,
+"flags": 36
+}, {
+"pin_name": &"temp_1",
+"dir": 1,
+"flags": 36
+}, {
+"pin_name": &"temp_2",
+"dir": 1,
+"flags": 36
+}, {
+"pin_name": &"temp_3",
+"dir": 1,
+"flags": 36
+}, {
+"pin_name": &"choice_0_out",
+"dir": 1,
+"flags": 4
+}])
+
 [resource]
 base_type = &"Node"
 description = "Base template for Node with default Godot cycle methods."
 functions = Array[OScriptFunction]([SubResource("OScriptFunction_ph4bv")])
-connections = Array[int]([6, 0, 7, 0, 6, 1, 9, 0, 7, 0, 11, 0, 9, 0, 7, 1, 8, 0, 7, 4, 10, 0, 7, 5])
-nodes = Array[OScriptNode]([SubResource("OScriptNodeEvent_gja7p"), SubResource("OScriptNodeDialogueMessage_qkyiu"), SubResource("OScriptNodeDialogueChoice_h8ien"), SubResource("OScriptNodeCallMemberFunction_3s3ke"), SubResource("OScriptNodeDialogueChoice_t3lh5"), SubResource("OScriptNodeDialogueMessage_wn330")])
+connections = Array[int]([6, 0, 7, 0, 6, 1, 9, 0, 7, 0, 11, 0, 12, 0, 11, 0, 7, 1, 12, 0, 9, 0, 7, 1, 8, 0, 7, 4, 10, 0, 7, 5])
+nodes = Array[OScriptNode]([SubResource("OScriptNodeEvent_gja7p"), SubResource("OScriptNodeDialogueMessage_qkyiu"), SubResource("OScriptNodeDialogueChoice_h8ien"), SubResource("OScriptNodeCallMemberFunction_3s3ke"), SubResource("OScriptNodeDialogueChoice_t3lh5"), SubResource("OScriptNodeDialogueMessage_wn330"), SubResource("OScriptNodeDialogueMessage_7tngg")])
 graphs = Array[OScriptGraph]([SubResource("OScriptGraph_10o0e")])
