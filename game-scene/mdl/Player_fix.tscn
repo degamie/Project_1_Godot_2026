@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://blj2qamvc7dbq" path="res://src/third_person_controller.gd" id="1_mp36r"]
 [ext_resource type="PackedScene" uid="uid://bmrt36kxve1q0" path="res://game-scene/mdl/Praladha_mdl_alpha.fbx" id="2_o6fqq"]
-[ext_resource type="Script" uid="uid://dxdoo0btj8pg1" path="res://game-scene/mdl/dialogue_scripting.torch" id="5_jruo6"]
+[ext_resource type="Script" uid="uid://dxdoo0btj8pg1" path="res://src/dialogue_scripting.torch" id="5_jruo6"]
 
 [sub_resource type="CapsuleShape3D" id="PlayerCapsule"]
 radius = 0.4
