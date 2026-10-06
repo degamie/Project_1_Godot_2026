@@ -39,7 +39,7 @@ extends CharacterBody3D
 @export var input_E: String = "E"  # optional; safely disabled if not mapped
 
 var mouse_captured: bool = false
-var move_speed: float = 3
+var move_speed: float = 5
 
 @onready var camera_pivot: Node3D = $CameraPivot
 @onready var spring_arm: SpringArm3D = $CameraPivot/SpringArm3D
