@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cyy85lrygdtsj"]
 
+[ext_resource type="PackedScene" uid="uid://ds0oo3shm8tvv" path="res://game-scene/Player.tscn" id="1_ogy1v"]
 [ext_resource type="PackedScene" uid="uid://df3uqrmectr83" path="res://game-scene/nar_simha_movie_palace.tscn" id="2_ogy1v"]
 [ext_resource type="PackedScene" uid="uid://dub3my887gcyw" path="res://game-scene/mdl/Player_fix.tscn" id="3_wn330"]
 
@@ -86,8 +87,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 3, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Room/WallWest" unique_id=1265100423]
 shape = SubResource("WallShapeEW")
 
+[node name="Player" parent="." unique_id=1097412986 instance=ExtResource("1_ogy1v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3906898, -0.6637019)
+visible = false
+
 [node name="NarSimha_Movie_palace" parent="." unique_id=860587034 instance=ExtResource("2_ogy1v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.2303715, 0.21433377, 0.08383286, 1.5949221)
 
-[node name="Player" parent="." unique_id=1579825540 instance=ExtResource("3_wn330")]
+[node name="Playe_fix" parent="." unique_id=1579825540 instance=ExtResource("3_wn330")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.6863885)
