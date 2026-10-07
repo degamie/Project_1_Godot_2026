@@ -112,7 +112,7 @@ input_capture_on_drag = true
 physics_material_override = SubResource("PhysicsMaterial_j2o6x")
 
 [node name="Hall_BackWall" parent="." index="89" unique_id=903824640]
-transform = Transform3D(1, 0, 0, 0, 1.8792135, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 10.7865, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Hall_BackWall" index="0" unique_id=1513684429]
 transform = Transform3D(1, 0, 0, 0, 3.4118116, 0, 0, 0, 1, 0, 0.037483215, 0)
