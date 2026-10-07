@@ -1,0 +1,365 @@
+[orchestration type="OScript" load_steps=13 format=4 uid="uid://bajywkoyou1ns"]
+
+[obj type="OScriptFunction" id="OScriptFunction_ph4bv"]
+guid = "28F35A75-AD6B-485E-A206-DA539DB08D95"
+method = {
+"name": &"_input",
+"flags": 8,
+"args": [{
+"name": &"event",
+"type": 24,
+"class_name": &"InputEvent",
+"hint": 17,
+"hint_string": "InputEvent"
+}]
+}
+id = 6
+
+[obj type="OScriptGraph" id="OScriptGraph_10o0e"]
+graph_name = &"EventGraph"
+flags = 8
+nodes = Array[int]([6, 7, 8, 9, 10, 11, 12, 13, 14, 15])
+functions = Array[int]([6])
+
+[obj type="OScriptNodeEvent" id="OScriptNodeEvent_gja7p"]
+function_id = "28F35A75-AD6B-485E-A206-DA539DB08D95"
+id = 6
+position = Vector2(-140, -120)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}, {
+"pin_name": &"event",
+"type": 24,
+"dir": 1,
+"flags": 2,
+"target_class": "InputEvent",
+"hint": 17,
+"hint_string": "InputEvent"
+}])
+
+[obj type="OScriptNodeDialogueMessage" id="OScriptNodeDialogueMessage_qkyiu"]
+id = 7
+size = Vector2(407, 320)
+position = Vector2(1400, -380)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"name",
+"type": 4,
+"flags": 16777218,
+"label": "Speaker",
+"hint": 18
+}, {
+"pin_name": &"text",
+"type": 4,
+"flags": 16777218,
+"label": "Message",
+"hint": 18
+}, {
+"pin_name": &"scene",
+"type": 4,
+"flags": 8388610,
+"dv": "",
+"hint": 13,
+"hint_string": "*.scn,*.tscn; Scene Files"
+}, {
+"pin_name": &"choice_0",
+"type": 24,
+"flags": 10,
+"target_class": "OScriptNodeDialogueChoice"
+}, {
+"pin_name": &"choice_1",
+"type": 24,
+"flags": 10,
+"target_class": "OScriptNodeDialogueChoice"
+}, {
+"pin_name": &"temp_0",
+"dir": 1,
+"flags": 36
+}, {
+"pin_name": &"temp_1",
+"dir": 1,
+"flags": 36
+}, {
+"pin_name": &"temp_2",
+"dir": 1,
+"flags": 36
+}, {
+"pin_name": &"temp_3",
+"dir": 1,
+"flags": 36
+}, {
+"pin_name": &"choice_0_out",
+"dir": 1,
+"flags": 4
+}, {
+"pin_name": &"choice_1_out",
+"dir": 1,
+"flags": 4
+}])
+
+[obj type="OScriptNodeDialogueChoice" id="OScriptNodeDialogueChoice_h8ien"]
+id = 8
+position = Vector2(100, 220)
+pin_data = Array[Dictionary]([{
+"pin_name": &"text",
+"type": 4,
+"flags": 16777218,
+"dv": "Jai VasuDev!",
+"hint": 18
+}, {
+"pin_name": &"visible",
+"type": 1,
+"flags": 2,
+"dv": true
+}, {
+"pin_name": &"choice",
+"type": 24,
+"dir": 1,
+"flags": 2,
+"target_class": "OScriptNodeDialogueChoice"
+}])
+
+[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_3s3ke"]
+function_name = &"is_echo"
+target_class_name = "InputEvent"
+target_type = 24
+flags = 522
+method = {
+"name": &"is_echo",
+"return": {
+"type": 1
+},
+"flags": 5
+}
+chain = false
+id = 9
+size = Vector2(208, 76)
+position = Vector2(420, -580)
+pin_data = Array[Dictionary]([{
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "InputEvent",
+"target_class": "InputEvent",
+"hint": 17,
+"hint_string": "InputEvent"
+}, {
+"pin_name": &"return_value",
+"type": 1,
+"dir": 1,
+"flags": 1026
+}])
+
+[obj type="OScriptNodeDialogueChoice" id="OScriptNodeDialogueChoice_t3lh5"]
+id = 10
+position = Vector2(140, 440)
+pin_data = Array[Dictionary]([{
+"pin_name": &"text",
+"type": 4,
+"flags": 16777218,
+"dv": "",
+"hint": 18
+}, {
+"pin_name": &"visible",
+"type": 1,
+"flags": 2,
+"dv": true
+}, {
+"pin_name": &"choice",
+"type": 24,
+"dir": 1,
+"flags": 2,
+"target_class": "OScriptNodeDialogueChoice"
+}])
+
+[obj type="OScriptNodeDialogueMessage" id="OScriptNodeDialogueMessage_wn330"]
+id = 11
+size = Vector2(407, 320)
+position = Vector2(2716, -308)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"name",
+"type": 4,
+"flags": 16777218,
+"label": "Speaker",
+"dv": " God NarSimha",
+"hint": 18
+}, {
+"pin_name": &"text",
+"type": 4,
+"flags": 16777218,
+"label": "Message",
+"dv": "Blessings to Praladha ",
+"hint": 18
+}, {
+"pin_name": &"scene",
+"type": 4,
+"flags": 8388610,
+"dv": "res://game-scene/GameScene.tscn",
+"hint": 13,
+"hint_string": "*.scn,*.tscn; Scene Files"
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}])
+
+[obj type="OScriptNodeDialogueMessage" id="OScriptNodeDialogueMessage_7tngg"]
+id = 12
+size = Vector2(407, 320)
+position = Vector2(1980, -60)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"name",
+"type": 4,
+"flags": 16777218,
+"label": "Speaker",
+"dv": "Praladha",
+"hint": 18
+}, {
+"pin_name": &"text",
+"type": 4,
+"flags": 16777218,
+"label": "Message",
+"dv": "Jai Shri Rama",
+"hint": 18
+}, {
+"pin_name": &"scene",
+"type": 4,
+"flags": 8388610,
+"dv": "",
+"hint": 13,
+"hint_string": "*.scn,*.tscn; Scene Files"
+}, {
+"pin_name": &"choice_0",
+"type": 24,
+"flags": 10,
+"target_class": "OScriptNodeDialogueChoice"
+}, {
+"pin_name": &"temp_0",
+"dir": 1,
+"flags": 36
+}, {
+"pin_name": &"temp_1",
+"dir": 1,
+"flags": 36
+}, {
+"pin_name": &"temp_2",
+"dir": 1,
+"flags": 36
+}, {
+"pin_name": &"temp_3",
+"dir": 1,
+"flags": 36
+}, {
+"pin_name": &"choice_0_out",
+"dir": 1,
+"flags": 4
+}])
+
+[obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_7tngg"]
+mode = 1
+target_class = &"AcceptDialog"
+property_name = &"ok_button_text"
+property = {
+"name": &"ok_button_text",
+"type": 4,
+"class_name": &"",
+"hint": 0,
+"hint_string": "",
+"usage": 6
+}
+id = 13
+size = Vector2(346, 76)
+position = Vector2(1540, 60)
+pin_data = Array[Dictionary]([{
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "AcceptDialog",
+"target_class": "AcceptDialog",
+"dv": null
+}, {
+"pin_name": &"ok_button_text",
+"type": 4,
+"dir": 1,
+"flags": 2,
+"dv": ""
+}])
+
+[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_mey51"]
+function_name = &"get_label"
+target_class_name = "AcceptDialog"
+target_type = 24
+flags = 520
+method = {
+"name": &"get_label",
+"return": {
+"type": 24,
+"class_name": &"Label"
+}
+}
+chain = false
+id = 14
+size = Vector2(272, 76)
+position = Vector2(1260, 180)
+pin_data = Array[Dictionary]([{
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "AcceptDialog",
+"target_class": "AcceptDialog"
+}, {
+"pin_name": &"return_value",
+"type": 24,
+"dir": 1,
+"flags": 2,
+"label": "Label",
+"target_class": "Label"
+}])
+
+[obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_mey51"]
+mode = 1
+target_class = &"AcceptDialog"
+property_name = &"dialog_text"
+property = {
+"name": &"dialog_text",
+"type": 4,
+"class_name": &"",
+"hint": 18,
+"hint_string": "",
+"usage": 6
+}
+id = 15
+position = Vector2(900, 300)
+pin_data = Array[Dictionary]([{
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "AcceptDialog",
+"target_class": "AcceptDialog"
+}, {
+"pin_name": &"dialog_text",
+"type": 4,
+"dir": 1,
+"flags": 16777218,
+"hint": 18
+}])
+resource_local_to_scene = true
+script = null
+
+[resource]
+base_type = &"Node"
+description = "Base template for Node with default Godot cycle methods."
+functions = Array[OScriptFunction]([SubResource("OScriptFunction_ph4bv")])
+connections = Array[int]([6, 0, 7, 0, 6, 1, 9, 0, 7, 0, 11, 0, 12, 0, 11, 0, 7, 1, 12, 0, 9, 0, 7, 1, 8, 0, 7, 4, 10, 0, 7, 5])
+nodes = Array[OScriptNode]([SubResource("OScriptNodeEvent_gja7p"), SubResource("OScriptNodeDialogueMessage_qkyiu"), SubResource("OScriptNodeDialogueChoice_h8ien"), SubResource("OScriptNodeCallMemberFunction_3s3ke"), SubResource("OScriptNodeDialogueChoice_t3lh5"), SubResource("OScriptNodeDialogueMessage_wn330"), SubResource("OScriptNodeDialogueMessage_7tngg"), SubResource("OScriptNodePropertyGet_7tngg"), SubResource("OScriptNodeCallMemberFunction_mey51"), SubResource("OScriptNodePropertyGet_mey51")])
+graphs = Array[OScriptGraph]([SubResource("OScriptGraph_10o0e")])
