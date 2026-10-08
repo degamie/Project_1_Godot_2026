@@ -91,3 +91,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.2303715, 0.21433377, 0.0838328
 
 [node name="Player" parent="." unique_id=1579825540 instance=ExtResource("3_wn330")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.6863885)
+cam_run = null
+can_move = null
+has_gravity = null
+can_jump = null
+can_E = null
+look_speed = null
+base_speed = null
+E_speed = null
+jump_velocity = null
+turn_speed = null
+min_pitch_deg = null
+max_pitch_deg = null
+input_forward = null
+input_left = null
+input_right = null
+input_back = null
+input_jump = null
+input_E = null
