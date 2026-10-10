@@ -1,19 +1,22 @@
 [gd_scene format=3 uid="uid://cyy85lrygdtsj"]
 
+[ext_resource type="Texture2D" uid="uid://bwirol4mbk68r" path="res://game-scene/Skybbox/Universe_image_game_scene.jpg" id="1_wn330"]
 [ext_resource type="PackedScene" uid="uid://df3uqrmectr83" path="res://game-scene/nar_simha_movie_palace.tscn" id="2_ogy1v"]
 [ext_resource type="PackedScene" uid="uid://dub3my887gcyw" path="res://game-scene/mdl/Player_fix.tscn" id="3_wn330"]
 
 [sub_resource type="ProceduralSkyMaterial" id="SkyMat"]
 resource_local_to_scene = true
-sky_top_color = Color(0.25, 0.28, 0.45, 1)
-sky_horizon_color = Color(0.95, 0.55, 0.35, 1)
+sky_top_color = Color(0.220352, 3.792703e-05, 0.82214373, 1)
+sky_horizon_color = Color(0.19215687, 0, 1, 1)
+sky_cover = ExtResource("1_wn330")
 ground_bottom_color = Color(0.15, 0.12, 0.12, 1)
-ground_horizon_color = Color(0.46120268, 0.67950904, 0.24348262, 1)
+ground_horizon_color = Color(0, 0.13114455, 0.99999934, 1)
 ground_curve = 0.15
 
 [sub_resource type="Sky" id="Sky1"]
+resource_local_to_scene = true
 sky_material = SubResource("SkyMat")
-process_mode = 1
+process_mode = 3
 
 [sub_resource type="Environment" id="Env1"]
 background_mode = 2
@@ -40,13 +43,15 @@ size = Vector3(20, 6, 1)
 size = Vector3(1, 6, 20)
 
 [node name="GameScene" type="Node3D" unique_id=913055358]
+top_level = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=947935628]
 environment = SubResource("Env1")
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=502765615]
-transform = Transform3D(-0.8660254, -0.21130916, 0.45315394, 0, 0.90630776, 0.42261827, -0.50000006, 0.36599815, -0.7848855, 0, 0, 0)
-light_color = Color(0.83227015, 0.7250773, 0.14450365, 1)
+transform = Transform3D(-0.8660254, -0.21130916, 0.45315394, 0, 0.9063078, 0.42261827, -0.50000006, 0.36599818, -0.7848855, 0, 0, 0)
+top_level = true
+light_color = Color(0.36676726, 0.775277, 0.99999994, 1)
 light_energy = 1.3
 shadow_enabled = true
 
@@ -88,24 +93,7 @@ shape = SubResource("WallShapeEW")
 
 [node name="NarSimha_Movie_palace" parent="." unique_id=860587034 instance=ExtResource("2_ogy1v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.2303715, 0.21433377, 0.08383286, 1.5949221)
+visibility_parent = NodePath("../Room/Floor/MeshInstance3D")
 
 [node name="Player" parent="." unique_id=1579825540 instance=ExtResource("3_wn330")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.6863885)
-cam_run = null
-can_move = null
-has_gravity = null
-can_jump = null
-can_E = null
-look_speed = null
-base_speed = null
-E_speed = null
-jump_velocity = null
-turn_speed = null
-min_pitch_deg = null
-max_pitch_deg = null
-input_forward = null
-input_left = null
-input_right = null
-input_back = null
-input_jump = null
-input_E = null

@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dmeujksxshy8g"]
+
+[ext_resource type="Script" uid="uid://cq544q2px8pii" path="res://addons/orchestrator/scenes/dialogue_message.gd" id="1_onkyh"]
+[ext_resource type="Texture2D" path="res://game-scene/Skybbox/Universe_image_game_scene.jpg" id="2_ol24e"]
+
+[sub_resource type="Environment" id="Environment_j2o6x"]
+ssr_enabled = true
+ssr_fade_in = 0.64306456
+ssao_enabled = true
+glow_enabled = true
+glow_normalized = true
+glow_blend_mode = 2
+glow_hdr_scale = 4.0
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_qby1c"]
+
+[sub_resource type="Compositor" id="Compositor_dfuki"]
+
+[node name="Universe" type="Node3D" unique_id=903247539]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=595491161]
+process_priority = 1
+process_physics_priority = 1
+environment = SubResource("Environment_j2o6x")
+camera_attributes = SubResource("CameraAttributesPractical_qby1c")
+compositor = SubResource("Compositor_dfuki")
+script = ExtResource("1_onkyh")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=820539531]
+process_priority = 1
+process_physics_priority = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 74.48537, 0)
+light_color = Color(0.061298154, 0, 0.55133885, 1)
+light_projector = ExtResource("2_ol24e")
+light_specular = 12.364
+shadow_enabled = true
+shadow_transmittance_bias = 11.05
+editor_only = true
+omni_shadow_mode = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2022230148]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer" unique_id=2053231782]
+follow_viewport_enabled = true
