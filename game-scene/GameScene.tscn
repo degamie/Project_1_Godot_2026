@@ -97,3 +97,4 @@ visibility_parent = NodePath("../Room/Floor/MeshInstance3D")
 
 [node name="Player" parent="." unique_id=1579825540 instance=ExtResource("3_wn330")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.6863885)
+floor_constant_speed = true
