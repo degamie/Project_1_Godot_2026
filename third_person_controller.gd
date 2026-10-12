@@ -1,4 +1,4 @@
-#//WID(11/10/2026)(Sarthak Mittal(DegamieSign)(ThirdPersonController)(Third Person Controller)#1 
+#//WID(12/10/2026)(Sarthak Mittal(DegamieSign)(ThirdPersonController)(Third Person Controller)#1 
 extends CharacterBody3D
 ## Third-person controller: WASD/arrow movement relative to the camera
 ## (so the player can walk toward any part of the room, in any direction
@@ -23,7 +23,7 @@ extends CharacterBody3D
 @export var can_E: bool = true
 
 @export_group("Speeds")
-@export var look_speed: float = .17
+@export var look_speed: float = 1
 @export var base_speed: float =40
 @export var E_speed: float = 126
 @export var jump_velocity: float = 10.0
@@ -44,7 +44,7 @@ extends CharacterBody3D
 @export var add_wasd: bool = true
 
 var mouse_captured: bool = false
-var move_speed: float =19
+var move_speed: float =20
 
 @onready var camera_pivot: Node3D = $CameraPivot
 @onready var spring_arm: SpringArm3D = $CameraPivot/SpringArm3D
