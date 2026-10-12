@@ -1,3 +1,4 @@
+#WID(12/10/2026)(Sarthak Mittal)(DegamieSign)(Planets)
 extends Node3D
 ## Procedural universe / solar system scene.
 ## Controls: click = capture mouse, Esc = release, WASD = fly, Space/E = up, Q/Ctrl = down,
@@ -27,7 +28,7 @@ var moon_pivot: Node3D
 var yaw := 0.0
 var pitch := -0.25
 var velocity := Vector3.ZERO
-var time_scale := 1.0
+var time_scale := 1.1
 var paused := false
 var rng := RandomNumberGenerator.new()
 
@@ -47,9 +48,9 @@ func _ready() -> void:
 func _setup_environment() -> void:
 	var env := Environment.new()
 	env.background_mode = Environment.BG_COLOR
-	env.background_color = Color(0.0, 0.0, 0.02)
+	env.background_color = Color(0.0, 104.461, 151.371, 1.0)
 	env.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
-	env.ambient_light_color = Color(0.12, 0.13, 0.2)
+	env.ambient_light_color = Color(0.178, 0.267, 0.63, 1.0)
 	env.ambient_light_energy = 0.6
 	env.tonemap_mode = Environment.TONE_MAPPER_FILMIC
 	env.glow_enabled = true
