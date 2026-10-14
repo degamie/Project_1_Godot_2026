@@ -1,4 +1,4 @@
-#WID(12/10/2026)(Sarthak Mittal)(DegamieSign)(Planets)
+#WID(14/10/2026)(Sarthak Mittal)(DegamieSign)(Planets#1)
 extends Node3D
 ## Procedural universe / solar system scene.
 ## Controls: click = capture mouse, Esc = release, WASD = fly, Space/E = up, Q/Ctrl = down,
@@ -28,7 +28,7 @@ var moon_pivot: Node3D
 var yaw := 0.0
 var pitch := -0.25
 var velocity := Vector3.ZERO
-var time_scale := 1.1
+var time_scale := 1.7
 var paused := false
 var rng := RandomNumberGenerator.new()
 
