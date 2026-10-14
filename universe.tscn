@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dmeujksxshy8g"]
 
 [ext_resource type="Script" uid="uid://cq544q2px8pii" path="res://addons/orchestrator/scenes/dialogue_message.gd" id="1_onkyh"]
-[ext_resource type="Texture2D" path="res://game-scene/Skybbox/Universe_image_game_scene.jpg" id="2_ol24e"]
+[ext_resource type="Texture2D" uid="uid://bwirol4mbk68r" path="res://game-scene/Skybbox/Universe_image_game_scene.jpg" id="2_ol24e"]
 
 [sub_resource type="Environment" id="Environment_j2o6x"]
 ssr_enabled = true
