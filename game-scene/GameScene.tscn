@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://bwirol4mbk68r" path="res://game-scene/Skybbox/Universe_image_game_scene.jpg" id="1_wn330"]
 [ext_resource type="PackedScene" uid="uid://df3uqrmectr83" path="res://game-scene/nar_simha_movie_palace.tscn" id="2_ogy1v"]
 [ext_resource type="PackedScene" uid="uid://dub3my887gcyw" path="res://game-scene/mdl/Player_fix.tscn" id="3_wn330"]
+[ext_resource type="PackedScene" uid="uid://d4an8etn3qcrq" path="res://game-scene/mdl/NarSimha_God_Model/NarSimha_God_Model.fbx" id="4_r82x7"]
+[ext_resource type="Script" path="res://src/third_person_controller.gd" id="5_irc7j"]
 
 [sub_resource type="ProceduralSkyMaterial" id="SkyMat"]
 resource_local_to_scene = true
@@ -98,3 +100,27 @@ visibility_parent = NodePath("../Room/Floor/MeshInstance3D")
 [node name="Player" parent="." unique_id=1579825540 instance=ExtResource("3_wn330")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.6863885)
 floor_constant_speed = true
+orchestrator = null
+cam_run = null
+can_move = null
+has_gravity = null
+can_jump = null
+can_E = null
+mouse_sensitivity = null
+base_speed = null
+E_speed = null
+jump_velocity = null
+turn_speed = null
+min_pitch_deg = null
+max_pitch_deg = null
+input_forward = null
+input_left = null
+input_right = null
+input_back = null
+input_jump = null
+input_E = null
+add_wasd = null
+
+[node name="NarSimha_God_Model" parent="." unique_id=892937494 instance=ExtResource("4_r82x7")]
+transform = Transform3D(0.049998492, 0, 0.00038840956, 0, 0.05, 0, -0.00038840956, 0, 0.049998492, 0, 3.157679, -8.611176)
+script = ExtResource("5_irc7j")
