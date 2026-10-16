@@ -1,4 +1,4 @@
-#//WID(12/10/2026)(Sarthak Mittal(DegamieSign)(ThirdPersonController)(Third Person Controller)#1 
+#//WID(16/10/2026)(Sarthak Mittal(DegamieSign)(ThirdPersonController)(Third Person Controller)#1.1
 extends CharacterBody3D
 ## Third-person controller: WASD/arrow movement relative to the camera
 ## (so the player can walk toward any part of the room, in any direction
@@ -23,15 +23,16 @@ extends CharacterBody3D
 @export var can_E: bool = true
 
 @export_group("Speeds")
-@export var look_speed: float = 10
+@export var look_speed: float = 15
 @export var base_speed: float =40
 @export var E_speed: float = 126
 @export var jump_velocity: float = 10.0
 @export var turn_speed: float = 12.5 # how fast the model turns to face movement
+@export var rotational_speed:float=5.7
 
 @export_group("Camera")
 @export var min_pitch_deg: float = -60.0
-@export var max_pitch_deg: float = 65
+@export var max_pitch_deg: float = 70
 
 @export_group("Input Actions")
 @export var input_forward: String = "ui_up"
@@ -44,7 +45,7 @@ extends CharacterBody3D
 @export var add_wasd: bool = true
 
 var mouse_captured: bool = false
-var move_speed: float =20
+var move_speed: float =25
 
 @onready var camera_pivot: Node3D = $CameraPivot
 @onready var spring_arm: SpringArm3D = $CameraPivot/SpringArm3D
