@@ -1,4 +1,4 @@
-#//WID(14/10/2026)(Sarthak Mittal(DegamieSign)(ThirdPersonController)(Third Person Controller)#1 
+#//WID(16/10/2026)(Sarthak Mittal(DegamieSign)(ThirdPersonController)(Third Person Controller)#1.1/1
 extends CharacterBody3D
 ## Third-person controller: WASD/arrow movement relative to the camera
 ## (so the player can walk toward any part of the room, in any direction
@@ -32,7 +32,7 @@ extends CharacterBody3D
 
 @export_group("Camera")
 @export var min_pitch_deg: float = -60.0
-@export var max_pitch_deg: float = 65
+@export var max_pitch_deg: float = 70
 
 @export_group("Input Actions")
 @export var input_forward: String = "ui_up"
@@ -45,7 +45,7 @@ extends CharacterBody3D
 @export var add_wasd: bool = true
 
 var mouse_captured: bool = false
-var move_speed: float =20
+var move_speed: float =25
 
 @onready var camera_pivot: Node3D = $CameraPivot
 @onready var spring_arm: SpringArm3D = $CameraPivot/SpringArm3D
@@ -132,7 +132,9 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-
+func can_run_highly()->bool:
+	return cam_run
+	
 ## Whether this character is allowed to take part in NPC orchestration/dialogue.
 func can_talk() -> bool:
 	return orchestrator
