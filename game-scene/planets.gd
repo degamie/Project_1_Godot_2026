@@ -28,7 +28,7 @@ var moon_pivot: Node3D
 var yaw := 0.0
 var pitch := -0.25
 var velocity := Vector3.ZERO
-var time_scale := 7.9
+var time_scale := 10
 var paused := false
 var rng := RandomNumberGenerator.new()
 

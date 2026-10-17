@@ -100,26 +100,6 @@ visibility_parent = NodePath("../Room/Floor/MeshInstance3D")
 [node name="Player" parent="." unique_id=1579825540 instance=ExtResource("3_wn330")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.6863885)
 floor_constant_speed = true
-orchestrator = null
-cam_run = null
-can_move = null
-has_gravity = null
-can_jump = null
-can_E = null
-mouse_sensitivity = null
-base_speed = null
-E_speed = null
-jump_velocity = null
-turn_speed = null
-min_pitch_deg = null
-max_pitch_deg = null
-input_forward = null
-input_left = null
-input_right = null
-input_back = null
-input_jump = null
-input_E = null
-add_wasd = null
 
 [node name="NarSimha_God_Model" parent="." unique_id=892937494 instance=ExtResource("4_r82x7")]
 transform = Transform3D(0.049998492, 0, 0.00038840956, 0, 0.05, 0, -0.00038840956, 0, 0.049998492, 0, 3.157679, -8.611176)
