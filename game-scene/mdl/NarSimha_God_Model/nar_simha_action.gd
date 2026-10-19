@@ -5,7 +5,9 @@ extends CharacterBody3D
 @export var bite_damage: float = 50.0
 var current_hunger: float = 100.0
 var is_eating: bool = false
-
+func restoring_hunger(hunger_restore:float)->float:
+	return hunger_restore
+	
 func can_eat(is_eating:bool)->bool:
 	return is_eating
 func _process(delta: float) -> void:
