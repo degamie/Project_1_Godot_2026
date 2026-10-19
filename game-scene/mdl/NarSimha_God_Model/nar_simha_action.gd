@@ -1,10 +1,13 @@
-#WID(18/10/2026)(Sarthak Mittal(DegamieSign)(NarSimha(action))
+#WID(19/10/2026)(Sarthak Mittal(DegamieSign)(NarSimha(action))
 extends CharacterBody3D
 @onready var bitezone:Area3D=$MouthBiteZone
 @export var hunger_restore:float=20.0
 @export var bite_damage: float = 50.0
 var current_hunger: float = 100.0
 var is_eating: bool = false
+
+func can_eat(is_eating:bool)->bool:
+	return is_eating
 func _process(delta: float) -> void:
 	# Keep track of the lion's hunger over time
 	current_hunger = max(0.0, current_hunger - delta * 0.5)
