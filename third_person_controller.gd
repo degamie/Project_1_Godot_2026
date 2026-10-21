@@ -43,6 +43,9 @@ var move_speed: float = 5.0
 @onready var spring_arm: SpringArm3D = $CameraPivot/SpringArm3D
 @onready var camera: Camera3D = $CameraPivot/SpringArm3D/Camera3D
 @onready var model: Node3D = $CharacterModel
+func move_camera_pivot(camera_pivot: Node3D)->Node3D:
+	return camera_pivot
+	
 func moving_speed(move_speed:float)->float:
 	return move_speed;
 func can_add_wasd(add_wasd:bool)->bool:
