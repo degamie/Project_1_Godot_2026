@@ -44,6 +44,9 @@ var move_speed: float = 5.0
 @onready var camera: Camera3D = $CameraPivot/SpringArm3D/Camera3D
 @onready var model: Node3D = $CharacterModel
 
+func set_max_degree(max_degree:float)->void:
+	this.max_degree=max_degree
+	
 func turning_speed(turn_speed:float)->float:
 	return turn_speed 
 func can_capture_mouse(mouse_captured:bool)->bool:
