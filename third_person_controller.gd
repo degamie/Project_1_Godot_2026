@@ -1,4 +1,4 @@
-# WID(21/10/2026)
+# WID(22/10/2026)
 # Sarthak Mittal | DegamieSign
 # ThirdPersonController -Slight Jump
 
@@ -43,6 +43,13 @@ var move_speed: float = 5.0
 @onready var spring_arm: SpringArm3D = $CameraPivot/SpringArm3D
 @onready var camera: Camera3D = $CameraPivot/SpringArm3D/Camera3D
 @onready var model: Node3D = $CharacterModel
+
+func turning_speed(turn_speed:float)->float:
+	return turn_speed 
+func can_capture_mouse(mouse_captured:bool)->bool:
+	if(mouse_captured!=false)mouse_captured=true
+	else mouse_capture=false
+
 func move_camera_pivot(camera_pivot: Node3D)->Node3D:
 	return camera_pivot
 	
