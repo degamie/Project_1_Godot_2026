@@ -1,4 +1,4 @@
-#WID(23/10/2026)(Sarthak Mittal)(DegamieSign)(Planets#1,1)
+#WID(23/10/2026)(Sarthak Mittal)(DegamieSign)(Planets#1,1).1
 extends Node3D
 ## Procedural universe / solar system scene.
 ## Controls: click = capture mouse, Esc = release, WASD = fly, Space/E = up, Q/Ctrl = down,
@@ -32,6 +32,9 @@ var time_scale := 10
 var paused := false
 var rng := RandomNumberGenerator.new()
 
+func set_pitch(pitch:float)->void:
+	this.pitch=pitch
+	
 func increase_velocity(velocity:Verctor3.ZERO)->Verctor3.ZERO:
 	velocity+=1;
 	return velocity
