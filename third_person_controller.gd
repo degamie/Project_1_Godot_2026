@@ -44,6 +44,8 @@ var move_speed: float = 5.0
 @onready var camera: Camera3D = $CameraPivot/SpringArm3D/Camera3D
 @onready var model: Node3D = $CharacterModel
 
+func set_mouse_sensitivity(mouse_sensitivity: float)->float:
+	this.mouse_sensitivity=mouse_sensitivity;
 func increase_slide_jump(slide_jump:float)->float:
 	slide_jump+=1
 func set_camera(camera:Camera3D)->Camera3D:
