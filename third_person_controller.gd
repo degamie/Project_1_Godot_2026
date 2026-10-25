@@ -1,6 +1,6 @@
-# WID(24/10/2026)
+# WID(25/10/2026)
 # Sarthak Mittal | DegamieSign
-# ThirdPersonController -Slight Jump
+# ThirdPersonController(binding#mouse_captured)
 
 extends CharacterBody3D
 
@@ -37,13 +37,17 @@ var mouse_captured: bool = false
 var move_speed: float = 5.0
 @export var slide_jump:float =7.9
 @export var long_jump:float=9.9
-
+func set_mousecaptured(mouse_captured:bool)->void:
+	this.mouse_captured=mouse_captured
 func set_cam_run(cam_run: bool)->bool:
 	this.cam_run=cam_run
 @onready var camera_pivot: Node3D = $CameraPivot
 @onready var spring_arm: SpringArm3D = $CameraPivot/SpringArm3D
 @onready var camera: Camera3D = $CameraPivot/SpringArm3D/Camera3D
 @onready var model: Node3D = $CharacterModel
+
+func set_add_wasd(add_wasd: bool)->void:
+	this.add_wasd=add_wasd;
 
 func set_mouse_sensitivity(mouse_sensitivity: float)->float:
 	this.mouse_sensitivity=mouse_sensitivity;
