@@ -103,4 +103,5 @@ floor_constant_speed = true
 
 [node name="NarSimha_God_Model" parent="." unique_id=892937494 instance=ExtResource("4_r82x7")]
 transform = Transform3D(0.049998492, 0, 0.00038840956, 0, 0.05, 0, -0.00038840956, 0, 0.049998492, 0, 3.157679, -8.611176)
+top_level = true
 script = ExtResource("5_irc7j")
