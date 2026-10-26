@@ -1,4 +1,4 @@
-# WID(25/10/2026)
+# WID(26/10/2026)
 # Sarthak Mittal | DegamieSign
 # ThirdPersonController(binding#mouse_captured)
 
@@ -46,6 +46,8 @@ func set_cam_run(cam_run: bool)->bool:
 @onready var camera: Camera3D = $CameraPivot/SpringArm3D/Camera3D
 @onready var model: Node3D = $CharacterModel
 
+func set_max_pitch_degree(max_pitch_deg:float)->float:
+	this.max_pitch_deg=max_pitch_deg;
 func set_add_wasd(add_wasd: bool)->void:
 	this.add_wasd=add_wasd;
 
