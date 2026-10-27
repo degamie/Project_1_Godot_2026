@@ -37,7 +37,8 @@ var mouse_captured: bool = false
 var move_speed: float = 5.0
 @export var slide_jump:float =7.9
 @export var long_jump:float=9.9
-
+func set_has_gravity(has_gravity:bool)->void:
+	this.has_gravity=has_gravity;
 func set_swift_jump(swift_jump:float)->float:
 	this.swift_jump=swift_jump
 func set_mouse_sensitivity( mouse_sensitivity: float)->void:
