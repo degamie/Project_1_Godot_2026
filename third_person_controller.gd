@@ -1,4 +1,4 @@
-# WID(26/10/2026)
+# WID(27/10/2026)
 # Sarthak Mittal | DegamieSign
 # ThirdPersonController(binding#mouse_captured)
 
@@ -37,6 +37,11 @@ var mouse_captured: bool = false
 var move_speed: float = 5.0
 @export var slide_jump:float =7.9
 @export var long_jump:float=9.9
+
+func set_swift_jump(swift_jump:float)->float:
+	this.swift_jump=swift_jump
+func set_mouse_sensitivity( mouse_sensitivity: float)->void:
+	this.mouse_sensitivity=mouse_sensitivity
 func set_mousecaptured(mouse_captured:bool)->void:
 	this.mouse_captured=mouse_captured
 func set_cam_run(cam_run: bool)->bool:
