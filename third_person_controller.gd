@@ -50,7 +50,8 @@ func set_cam_run(cam_run: bool)->bool:
 @onready var spring_arm: SpringArm3D = $CameraPivot/SpringArm3D
 @onready var camera: Camera3D = $CameraPivot/SpringArm3D/Camera3D
 @onready var model: Node3D = $CharacterModel
-
+func set_cam_move(cam_move:bool)->void:
+	this.cam_move=cam_move
 func set_jump_velocity(jump_velocity:float)->float:
 	this.jump_velocity=jump_velocitys
 
