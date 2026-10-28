@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cmnf4x3h3tdk8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dfuki"]
+transparency = 1
+blend_mode = 1
+depth_draw_mode = 1
+no_depth_test = true
+disable_fog = true
+albedo_color = Color(1.1478736, 0.57436585, 0.20924838, 1)
+emission_enabled = true
+heightmap_enabled = true
+backlight_enabled = true
+stencil_flags = 2
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qby1c"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_j2o6x"]
+
+[node name="fire_pfx_game_scene" type="Node3D" unique_id=2140253790]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=427074228]
+material_override = SubResource("StandardMaterial3D_dfuki")
+use_fixed_seed = true
+seed = 835495291
+fixed_fps = 45
+process_material = SubResource("ParticleProcessMaterial_qby1c")
+draw_passes = 2
+draw_pass_1 = SubResource("QuadMesh_j2o6x")
+draw_pass_2 = null
