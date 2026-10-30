@@ -1,4 +1,4 @@
-# WID(29/10/2026)
+# WID(30/10/2026)
 # Sarthak Mittal | DegamieSign
 # ThirdPersonController(binding#mouse_captured)
 
@@ -39,6 +39,7 @@ var mouse_captured: bool = false
 var move_speed: float = 15.0
 var jump_speed:float=26
 var jump_cnt:float=1.0
+var mouse_captured_cnt:float=7.9
 @onready var camera_pivot: Node3D = $CameraPivot
 @onready var spring_arm: SpringArm3D = $CameraPivot/SpringArm3D
 @onready var camera: Camera3D = $CameraPivot/SpringArm3D/Camera3D
