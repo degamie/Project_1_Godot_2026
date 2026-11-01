@@ -1,6 +1,21 @@
 [gd_scene format=3 uid="uid://cmnf4x3h3tdk8"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_3eioj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5xjcr"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0.53495556, 0.26840466, 0, 1)
+grow = true
+grow_amount = 0.01
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dfuki"]
+next_pass = SubResource("StandardMaterial3D_5xjcr")
 transparency = 1
 blend_mode = 1
 depth_draw_mode = 1
@@ -8,22 +23,46 @@ no_depth_test = true
 disable_fog = true
 albedo_color = Color(1.1478736, 0.57436585, 0.20924838, 1)
 emission_enabled = true
+emission = Color(0.2730277, 0.1787852, 0.063682705, 1)
+emission_on_uv2 = true
+bent_normal_enabled = true
+rim_enabled = true
 heightmap_enabled = true
 backlight_enabled = true
+backlight_texture = SubResource("AtlasTexture_3eioj")
+billboard_mode = 1
+billboard_keep_scale = true
+grow = true
+grow_amount = 1.76
+proximity_fade_enabled = true
+stencil_mode = 1
 stencil_flags = 2
+stencil_color = Color(0.53495556, 0.26840466, 0, 1)
+
+[sub_resource type="FogMaterial" id="FogMaterial_oh7hj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3r056"]
+next_pass = SubResource("FogMaterial_oh7hj")
+albedo_color = Color(0.63356, 0.41926408, 0.022612887, 1)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qby1c"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_j2o6x"]
+[sub_resource type="QuadMesh" id="QuadMesh_ms021"]
 
 [node name="fire_pfx_game_scene" type="Node3D" unique_id=2140253790]
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=427074228]
+process_priority = 1
+top_level = true
 material_override = SubResource("StandardMaterial3D_dfuki")
+material_overlay = SubResource("StandardMaterial3D_3r056")
+amount = 10
+preprocess = 1.0
 use_fixed_seed = true
 seed = 835495291
 fixed_fps = 45
+collision_base_size = 1.0
 process_material = SubResource("ParticleProcessMaterial_qby1c")
 draw_passes = 2
-draw_pass_1 = SubResource("QuadMesh_j2o6x")
+draw_pass_1 = SubResource("QuadMesh_ms021")
 draw_pass_2 = null

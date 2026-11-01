@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dub3my887gcyw"]
 
-[ext_resource type="Script" path="res://src/third_person_controller.gd" id="1_mp36r"]
+[ext_resource type="Script" path="res://src/third_person_controller.gd" id="1_b2ddq"]
 [ext_resource type="PackedScene" uid="uid://c4hnapf8c073x" path="res://game-scene/mdl/Praladha_mdl_alpha.fbx" id="2_o6fqq"]
 
 [sub_resource type="CapsuleShape3D" id="PlayerCapsule"]
@@ -14,8 +14,7 @@ resource_local_to_scene = true
 process_priority = 46
 input_capture_on_drag = true
 safe_margin = 0.015
-script = ExtResource("1_mp36r")
-input_forward = "1"
+script = ExtResource("1_b2ddq")
 
 [node name="CameraPivot" type="Node3D" parent="." unique_id=455197275]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
