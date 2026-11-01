@@ -1,4 +1,4 @@
-# WID(30/10/2026)
+# WID(1/11/2026)
 # Sarthak Mittal | DegamieSign
 # ThirdPersonController(binding#mouse_captured)
 
@@ -26,6 +26,8 @@ extends CharacterBody3D
 @export var min_pitch_deg: float = -60.0
 @export var max_pitch_deg: float = 61.5
 @export var max_cam_rot_angle:float=60
+func set_max_cam_rot_angle(max_cam_rot_angle:float)->void:
+	this.max_cam_rot_angle=max_cam_rot_angle
 
 @export_group("Input Actions")
 @export var input_forward: String = "ui_up"
@@ -36,11 +38,14 @@ extends CharacterBody3D
 @export var input_E: String = "E"
 @export var add_wasd: bool = true
 
+func can_add_wasd(add_wasd: bool)->bool:
+	return add_wasd 
 var mouse_captured: bool = false
 var move_speed: float = 15.0
 var jump_speed:float=26
 var jump_cnt:float=1.0
 var mouse_captured_cnt:float=7.9
+var speed_range:float=8.1
 @onready var camera_pivot: Node3D = $CameraPivot
 @onready var spring_arm: SpringArm3D = $CameraPivot/SpringArm3D
 @onready var camera: Camera3D = $CameraPivot/SpringArm3D/Camera3D
