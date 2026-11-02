@@ -31,6 +31,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 shape = SubResource("PlayerCapsule")
 
 [node name="CharacterModel" type="MeshInstance3D" parent="." unique_id=1937392900]
+transform = Transform3D(1.1190903, 0, 0, 0, 1.1375277, 0, 0, 0, 1.2793355, 0, 0, 0)
 transparency = 1.0
 cast_shadow = 0
 mesh = SubResource("CapsuleMesh_o6fqq")
