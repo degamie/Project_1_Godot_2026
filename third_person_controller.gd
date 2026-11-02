@@ -26,6 +26,9 @@ extends CharacterBody3D
 @export var min_pitch_deg: float = -60.0
 @export var max_pitch_deg: float = 61.5
 @export var max_cam_rot_angle:float=60
+
+@export_group("sense")
+@export var can_sense:bool=true
 #func set_max_cam_rot_angle(max_cam_rot_angle:float)->void:
 	#this.max_cam_rot_angle=max_cam_rot_angle
 
@@ -37,7 +40,7 @@ extends CharacterBody3D
 @export var input_jump: String = "ui_accept"
 @export var input_E: String = "E"
 @export var add_wasd: bool = true
-
+@export var input_dodge_face:bool=true 
 func can_add_wasd(add_wasd: bool)->bool:
 	return add_wasd 
 var mouse_captured: bool = false
