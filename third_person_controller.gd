@@ -52,6 +52,7 @@ var jump_speed:float=26
 var jump_cnt:float=1.0
 var mouse_captured_cnt:float=7.9
 var speed_range:float=8.1
+var speed_cnt:float=8.7
 func increase_speed_range(speed_range:float)->float:
 	speed_range+=1;
 	return speed_range
