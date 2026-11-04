@@ -1,4 +1,4 @@
-# WID(3/11/2026)Sarthak Mittal | DegamieSign
+# WID(4/11/2026)Sarthak Mittal | DegamieSign
 # ThirdPersonController(binding#mouse_captured)#1.1
 
 extends CharacterBody3D
@@ -56,6 +56,8 @@ var speed_cnt:float=8.7
 func increase_speed_range(speed_range:float)->float:
 	speed_range+=1;
 	return speed_range
+
+var jump_range:float=9
 @onready var camera_pivot: Node3D = $CameraPivot
 @onready var spring_arm: SpringArm3D = $CameraPivot/SpringArm3D
 @onready var camera: Camera3D = $CameraPivot/SpringArm3D/Camera3D
