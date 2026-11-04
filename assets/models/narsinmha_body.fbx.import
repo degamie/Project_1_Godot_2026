@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://d4an8etn3qcrq"
-path="res://.godot/imported/NarSimha_God_Model.fbx-05eea74e6bb3275ef2bee86bba23bcc9.scn"
+uid="uid://bgr1341c4kbg"
+path="res://.godot/imported/narsinmha_body.fbx-30c9717941fc89abb678252393970437.scn"
 
 [deps]
 
-source_file="res://game-scene/mdl/NarSimha_God_Model/NarSimha_God_Model.fbx"
-dest_files=["res://.godot/imported/NarSimha_God_Model.fbx-05eea74e6bb3275ef2bee86bba23bcc9.scn"]
+source_file="res://assets/models/narsinmha_body.fbx"
+dest_files=["res://.godot/imported/narsinmha_body.fbx-30c9717941fc89abb678252393970437.scn"]
 
 [params]
 
