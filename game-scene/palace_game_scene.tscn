@@ -148,6 +148,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.055131912, -0.64747095, -3.
 
 [node name="NarSimha_Movie_palace2" parent="." unique_id=1162909453 instance=ExtResource("7_3r056")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.30455065, -0.6245208, 3.6262703)
-
-[node name="NarSimha_God_Model" parent="." unique_id=1783503197]
-transform = Transform3D(0.027828375, 0, 0, 0, 0.028430799, 0, 0, 0, 0.04196815, 0.37603867, -0.4744513, -1.9170182)
