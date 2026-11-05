@@ -21,6 +21,8 @@ extends CharacterBody3D
 @export var slide_jump: float = 7.9
 @export var long_jump: float = 9.9
 @export var turn_speed: float = 12.0
+func max_slide_jump(slide_jump: float)->float:
+	slide_jump+=1;
 func increase_turn_speed(turn_speed: float)->float:
 	turn_speed+=1;
 
