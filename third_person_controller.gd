@@ -21,6 +21,7 @@ extends CharacterBody3D
 @export var slide_jump: float = 7.9
 @export var long_jump: float = 9.9
 @export var turn_speed: float = 12.0
+
 func set_e_speed(E_speed: float)->void:
 	this.E_speed=E_speed
 func magnify_turn_speed(turn_speed: float)->float:
@@ -36,6 +37,8 @@ func increase_turn_speed(turn_speed: float)->float:
 @export var min_pitch_deg: float = -60.0
 @export var max_pitch_deg: float = 61.5
 @export var max_cam_rot_angle:float=60
+func is_moving(can_move;bool)->bool:
+	can_move=true;
 func detect_mouse_sensitivity(mouse_sensitivity: float)->float:
 	if(mouse_sensitivity!=0.0)get_mouse_sensitivity(mouse_sensitivity)
 	else get_mouse_sensitivity(0.0);
