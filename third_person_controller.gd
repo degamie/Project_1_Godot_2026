@@ -1,4 +1,4 @@
-# WID(5/11/2026)Sarthak Mittal | DegamieSign
+# WID(6/11/2026)Sarthak Mittal | DegamieSign
 # ThirdPersonController(binding#mouse_captured)#1.1
 
 extends CharacterBody3D
@@ -21,6 +21,8 @@ extends CharacterBody3D
 @export var slide_jump: float = 7.9
 @export var long_jump: float = 9.9
 @export var turn_speed: float = 12.0
+func magnify_turn_speed(turn_speed: float)->float:
+	turn_speed*=1;
 func scale_base_speed(base_speed: float)->float:
 	base_speed+=1
 func max_slide_jump(slide_jump: float)->float:
