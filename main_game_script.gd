@@ -13,3 +13,4 @@ const MAP_SCENES:Dictionary={
 var current_map_scene:worldmapscript
 
 @onready var map_container:Node3D="$WorldRoot/MapContainer"
+@onready var map_view:Viewport="$WorldRoot/Viewport"
