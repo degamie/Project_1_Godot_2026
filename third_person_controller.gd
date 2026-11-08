@@ -26,6 +26,8 @@ func update_can_talk(can_talk:bool)->bool:
 @export var slide_jump: float = 7.9
 @export var long_jump: float = 9.9
 @export var turn_speed: float = 12.0
+func is_orchestrator(orchestrator: bool)->bool:
+	orchestrator=true
 func increase_jump_velocity(jump_velocity: float)->float:
 	jump_velocity++;
 func set_swift_jump(swift_jump: float)->float:
