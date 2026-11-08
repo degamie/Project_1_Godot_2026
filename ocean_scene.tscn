@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dybnngt2aiwmb"]
+
+[ext_resource type="PackedScene" uid="uid://bgb1witt1c1ec" path="res://game-scene/mdl/NarSimha_God_Model/Ocean_scene.fbx" id="1_neqh2"]
+[ext_resource type="Script" uid="uid://sbbb08qhx6nf" path="res://game-scene/mdl/NarSimha_God_Model/ocean_scene.gd" id="2_antt5"]
+
+[node name="Ocean_scene" type="Node3D" unique_id=1256360419]
+
+[node name="Ocean_scene" parent="." unique_id=202505749 instance=ExtResource("1_neqh2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22356617, 0, 1.6827534)
+top_level = true
+script = ExtResource("2_antt5")
