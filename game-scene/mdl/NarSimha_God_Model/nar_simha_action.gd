@@ -1,4 +1,4 @@
-#WID(04/11/2026)(Sarthak Mittal(DegamieSign)(NarSimha(action))
+#WID(07/11/2026)(Sarthak Mittal(DegamieSign)(NarSimha(action))
 extends CharacterBody3D
 @onready var bitezone:Area3D=$MouthBiteZone
 @export var hunger_restore:float=20.0
@@ -7,6 +7,8 @@ var current_hunger: float = 100.0
 var is_eating: bool = false
 
 var lion_roar_range:float=100
+func increase_lion_roar(lion_roar_range:float)->float:
+	lion_roar_range+=1;
 func calculate_lion_roar_range(lion_roar_range:float)->float:
 	 if(lion_roar_range>0)get_lion_roar_range(lion_roar_range);
 		else get_lion_roar_range(0.0);

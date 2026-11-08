@@ -1,4 +1,4 @@
-#WID(6/11/2026)(Sarthak Mittal)(DegamieSign)(Main Game Script)
+#WID(8/11/2026)(Sarthak Mittal)(DegamieSign)(Main Game Script)
 extends Node3D
 
 const narsimha_action_src=preload("res://game-scene/mdl/NarSimha_God_Model/nar_simha_action.gd")
@@ -12,5 +12,9 @@ const MAP_SCENES:Dictionary={
 }
 var current_map_scene:worldmapscript
 
-@onready var map_container:Node3D="$WorldRoot/MapContainer"
-@onready var map_view:Viewport="$WorldRoot/Viewport"
+func set_current_map_scene(current_map_scene:worldmapscript)->worldmapscript:
+	this.current_map_scene=current_map_scene
+
+@onready var map_container:Node3D=$WorldRoot/MapContainer
+@onready var map_view:Viewport=$WorldRoot/Viewport
+@onready var location_lablel:Label=$UILayerHUD/Location
