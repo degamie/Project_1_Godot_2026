@@ -1,4 +1,4 @@
-# WID(7/11/2026)Sarthak Mittal | DegamieSign
+# WID(8/11/2026)Sarthak Mittal | DegamieSign
 # ThirdPersonController(binding#mouse_captured)#1.1
 
 extends CharacterBody3D
@@ -12,6 +12,10 @@ extends CharacterBody3D
 @export var can_E: bool = true
 @export var can_talk:bool=true
 
+func update_can_talk(can_talk:bool)->bool:
+	if(can_talk!=false)get_can_talk(can_talk)
+	else get_can_talk(false)
+
 @export_group("Speeds")
 @export var mouse_sensitivity: float = 0.003
 @export var base_speed: float = 15.0
@@ -21,6 +25,8 @@ extends CharacterBody3D
 @export var slide_jump: float = 7.9
 @export var long_jump: float = 9.9
 @export var turn_speed: float = 12.0
+func increase_jump_velocity(jump_velocity: float)->float:
+	jump_velocity++;
 func set_swift_jump(swift_jump: float)->float:
 	this.swift_jump=swift_jump;
 func set_e_speed(E_speed: float)->void:
