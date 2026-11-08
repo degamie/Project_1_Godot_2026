@@ -11,7 +11,8 @@ extends CharacterBody3D
 @export var can_jump: bool = true
 @export var can_E: bool = true
 @export var can_talk:bool=true
-
+func is_gravity(has_gravity: bool)->bool:
+	is_gravity=true
 func update_can_talk(can_talk:bool)->bool:
 	if(can_talk!=false)get_can_talk(can_talk)
 	else get_can_talk(false)
