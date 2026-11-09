@@ -11,8 +11,9 @@ extends CharacterBody3D
 @export var can_jump: bool = true
 @export var can_E: bool = true
 @export var can_talk:bool=true
- @export var has_gravity_cnt:float=10.0
-
+@export var has_gravity_cnt:float=10.0
+func is_cam_run(cam_run: bool)->bool:
+	cam_run=true
 func multiply_gravity_cnt(has_gravity_cnt:float)->float:
 	has_gravity_cnt*=1;
 func increase_gravity_cnt(has_gravity_cnt:float)->float:
