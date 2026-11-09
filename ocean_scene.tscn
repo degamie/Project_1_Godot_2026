@@ -1,11 +1,78 @@
 [gd_scene format=3 uid="uid://dybnngt2aiwmb"]
 
 [ext_resource type="PackedScene" uid="uid://bgb1witt1c1ec" path="res://game-scene/mdl/NarSimha_God_Model/Ocean_scene.fbx" id="1_neqh2"]
-[ext_resource type="Script" uid="uid://sbbb08qhx6nf" path="res://game-scene/mdl/NarSimha_God_Model/ocean_scene.gd" id="2_antt5"]
+[ext_resource type="Texture2D" uid="uid://cwnjg3menlhwl" path="res://game-scene/mdl/textures/Ocean_water_texture_1.png" id="3_nnn6b"]
+[ext_resource type="Texture2D" uid="uid://0q2i3gmuxg4k" path="res://game-scene/mdl/textures/ocean_water_blend_map.jpg" id="4_kirxa"]
+[ext_resource type="Texture2D" uid="uid://b4wkw8xajrxyr" path="res://game-scene/mdl/textures/Ocean_water_texture.jpg" id="5_y7sdg"]
+[ext_resource type="Texture2D" uid="uid://dn3thgmbshhqg" path="res://game-scene/mdl/textures/Ocean_water_texture_refraction.jpg" id="6_hr5cw"]
+[ext_resource type="Script" uid="uid://dwuxp5i0yei7b" path="res://ocean_movement.gd" id="6_nnn6b"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qby1c"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j2o6x"]
+resource_local_to_scene = true
+render_priority = 10
+next_pass = SubResource("ParticleProcessMaterial_qby1c")
+transparency = 1
+depth_draw_mode = 1
+vertex_color_use_as_albedo = true
+vertex_color_is_srgb = true
+albedo_color = Color(0.432765, 0.9767851, 0.9699511, 1)
+albedo_texture = ExtResource("3_nnn6b")
+albedo_texture_force_srgb = true
+albedo_texture_msdf = true
+metallic = 1.0
+metallic_specular = 0.2
+metallic_texture = ExtResource("5_y7sdg")
+metallic_texture_channel = 3
+emission_enabled = true
+emission = Color(0.34354514, 0.7991435, 0.99999994, 1)
+emission_energy_multiplier = 0.2
+emission_on_uv2 = true
+normal_enabled = true
+normal_scale = 11.6
+normal_texture = ExtResource("5_y7sdg")
+bent_normal_enabled = true
+bent_normal_texture = ExtResource("4_kirxa")
+rim_enabled = true
+rim_texture = ExtResource("5_y7sdg")
+heightmap_enabled = true
+heightmap_deep_parallax = true
+heightmap_min_layers = 8
+heightmap_max_layers = 32
+heightmap_flip_tangent = true
+heightmap_flip_binormal = true
+heightmap_texture = ExtResource("4_kirxa")
+heightmap_flip_texture = true
+subsurf_scatter_enabled = true
+backlight_enabled = true
+backlight = Color(0.7683069, 0.7683071, 0.76830703, 1)
+backlight_texture = ExtResource("4_kirxa")
+refraction_enabled = true
+refraction_texture = ExtResource("6_hr5cw")
+uv1_scale = Vector3(-0.895, -0.895, -0.895)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 1.5
+texture_filter = 0
+disable_receive_shadows = true
+grow = true
+grow_amount = 0.5
+
+[sub_resource type="SphereMesh" id="SphereMesh_j2o6x"]
+
+[sub_resource type="Skin" id="Skin_qby1c"]
+resource_local_to_scene = true
 
 [node name="Ocean_scene" type="Node3D" unique_id=1256360419]
 
 [node name="Ocean_scene" parent="." unique_id=202505749 instance=ExtResource("1_neqh2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22356617, 0, 1.6827534)
 top_level = true
-script = ExtResource("2_antt5")
+
+[node name="Ocean_water" type="MeshInstance3D" parent="Ocean_scene" unique_id=1414508758]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004838228, 0.6435162, -0.002471447)
+material_override = SubResource("StandardMaterial3D_j2o6x")
+extra_cull_margin = 13532.69
+mesh = SubResource("SphereMesh_j2o6x")
+skin = SubResource("Skin_qby1c")
+script = ExtResource("6_nnn6b")
