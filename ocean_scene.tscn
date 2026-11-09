@@ -6,6 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://b4wkw8xajrxyr" path="res://game-scene/mdl/textures/Ocean_water_texture.jpg" id="5_y7sdg"]
 [ext_resource type="Texture2D" uid="uid://dn3thgmbshhqg" path="res://game-scene/mdl/textures/Ocean_water_texture_refraction.jpg" id="6_hr5cw"]
 [ext_resource type="Script" uid="uid://dwuxp5i0yei7b" path="res://ocean_movement.gd" id="6_nnn6b"]
+[ext_resource type="TextFile" path="res://src/underwater.gdshader" id="7_hr5cw"]
+[ext_resource type="Script" uid="uid://caci4h8080d07" path="res://ocean_pfx.gd" id="7_kirxa"]
+[ext_resource type="Script" uid="uid://bjwhn324nk3d2" path="res://camera_3d.gd" id="8_y7sdg"]
+
+[sub_resource type="GDScript" id="GDScript_j2o6x"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qby1c"]
 
@@ -15,6 +20,7 @@ render_priority = 10
 next_pass = SubResource("ParticleProcessMaterial_qby1c")
 transparency = 1
 depth_draw_mode = 1
+disable_ambient_light = true
 vertex_color_use_as_albedo = true
 vertex_color_is_srgb = true
 albedo_color = Color(0.432765, 0.9767851, 0.9699511, 1)
@@ -45,8 +51,9 @@ heightmap_flip_binormal = true
 heightmap_texture = ExtResource("4_kirxa")
 heightmap_flip_texture = true
 subsurf_scatter_enabled = true
+subsurf_scatter_skin_mode = true
 backlight_enabled = true
-backlight = Color(0.7683069, 0.7683071, 0.76830703, 1)
+backlight = Color(0.48842692, 0.8158726, 0.982516, 1)
 backlight_texture = ExtResource("4_kirxa")
 refraction_enabled = true
 refraction_texture = ExtResource("6_hr5cw")
@@ -59,20 +66,48 @@ grow = true
 grow_amount = 0.5
 
 [sub_resource type="SphereMesh" id="SphereMesh_j2o6x"]
+radius = 1.055
+height = 2.255
 
 [sub_resource type="Skin" id="Skin_qby1c"]
 resource_local_to_scene = true
 
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_j2o6x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qby1c"]
+clearcoat_enabled = true
+anisotropy_enabled = true
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_kirxa"]
+
 [node name="Ocean_scene" type="Node3D" unique_id=1256360419]
+script = SubResource("GDScript_j2o6x")
 
 [node name="Ocean_scene" parent="." unique_id=202505749 instance=ExtResource("1_neqh2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22356617, 0, 1.6827534)
 top_level = true
 
 [node name="Ocean_water" type="MeshInstance3D" parent="Ocean_scene" unique_id=1414508758]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004838228, 0.6435162, -0.002471447)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004838228, 2.1587799, -0.002471447)
 material_override = SubResource("StandardMaterial3D_j2o6x")
 extra_cull_margin = 13532.69
 mesh = SubResource("SphereMesh_j2o6x")
 skin = SubResource("Skin_qby1c")
 script = ExtResource("6_nnn6b")
+metadata/gdshader = ExtResource("7_hr5cw")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=804021015]
+transform = Transform3D(-0.99558616, 0, 0.09385185, 0, 1, 0, -0.09385185, 0, -0.99558616, 0, 2.3492746, -2.5993671)
+script = ExtResource("8_y7sdg")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=113025182]
+camera_attributes = SubResource("CameraAttributesPractical_j2o6x")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1203942434]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2284044, 2.1587799, 1.680282)
+material_override = SubResource("StandardMaterial3D_qby1c")
+fixed_fps = 45
+local_coords = true
+transform_align = 3
+process_material = SubResource("ParticleProcessMaterial_kirxa")
+script = ExtResource("7_kirxa")
