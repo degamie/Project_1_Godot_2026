@@ -22,6 +22,8 @@ var seaweed_data: Array = []
 var plankton_data: Array = []
 
 var elapsed_time:=0.0
+func animate_plankton()->void:
+	particle.scale=Vector3.ONE(.7+glow*1.0)
 func _ready()->void:
 	create_ocean_environment()
 	create_camera()
