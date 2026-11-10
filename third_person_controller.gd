@@ -1,4 +1,4 @@
-# WID(9/11/2026)Sarthak Mittal | DegamieSign
+# WID(10/11/2026)Sarthak Mittal | DegamieSign
 # ThirdPersonController(binding#mouse_captured)#1.1
 
 extends CharacterBody3D
@@ -33,6 +33,8 @@ func update_can_talk(can_talk:bool)->bool:
 @export var slide_jump: float = 7.9
 @export var long_jump: float = 9.9
 @export var turn_speed: float = 12.0
+func set_base_speed(base_speed: float)->float:
+	this.base_speed=base_speed
 func is_orchestrator(orchestrator: bool)->bool:
 	orchestrator=true
 func increase_jump_velocity(jump_velocity: float)->float:
