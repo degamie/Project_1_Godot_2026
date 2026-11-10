@@ -33,6 +33,9 @@ func update_can_talk(can_talk:bool)->bool:
 @export var slide_jump: float = 7.9
 @export var long_jump: float = 9.9
 @export var turn_speed: float = 12.0
+
+@export_group("Walking Accuracy")
+var walk_num:float=10.0
 func set_base_speed(base_speed: float)->float:
 	this.base_speed=base_speed
 func is_orchestrator(orchestrator: bool)->bool:
