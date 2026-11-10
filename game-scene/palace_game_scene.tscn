@@ -137,13 +137,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.055131912, 1.3944066, -3.30
 [node name="fire_pfx_game_scene" parent="fire_pfx_game_scene/fire_pfx_game_scene" unique_id=616712231 instance=ExtResource("6_3eioj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.055131912, -0.64747095, -3.306027)
 
-[node name="fire_pfx_game_scene2" parent="fire_pfx_game_scene" unique_id=861130412 instance=ExtResource("6_3eioj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.606247, 0.16360068, 1.001358e-05)
+[node name="fire_pfx_game_scene2" parent="fire_pfx_game_scene/fire_pfx_game_scene/fire_pfx_game_scene" unique_id=861130412 instance=ExtResource("6_3eioj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4959831, -0.5833349, 6.6120634)
 
-[node name="fire_pfx_game_scene" parent="fire_pfx_game_scene/fire_pfx_game_scene2" unique_id=1916876490 instance=ExtResource("6_3eioj")]
+[node name="fire_pfx_game_scene" parent="fire_pfx_game_scene/fire_pfx_game_scene/fire_pfx_game_scene/fire_pfx_game_scene2" unique_id=1916876490 instance=ExtResource("6_3eioj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.055131912, 1.3944066, -3.3060267)
 
-[node name="fire_pfx_game_scene" parent="fire_pfx_game_scene/fire_pfx_game_scene2/fire_pfx_game_scene" unique_id=662721176 instance=ExtResource("6_3eioj")]
+[node name="fire_pfx_game_scene" parent="fire_pfx_game_scene/fire_pfx_game_scene/fire_pfx_game_scene/fire_pfx_game_scene2/fire_pfx_game_scene" unique_id=662721176 instance=ExtResource("6_3eioj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.055131912, -0.64747095, -3.306027)
 
 [node name="NarSimha_Movie_palace2" parent="." unique_id=1162909453 instance=ExtResource("7_3r056")]

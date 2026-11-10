@@ -86,6 +86,16 @@ anisotropy_enabled = true
 
 [node name="Ocean_scene" type="Node3D" unique_id=1256360419]
 script = ExtResource("6_nnn6b")
+wave_cntrl = null
+is_wave_moving = null
+ocean_width = null
+ocean_depth = null
+fish_count = null
+bubble_count = null
+plankton_count = null
+swim_speed = null
+sway_seed_speed = null
+bubble_speed = null
 
 [node name="Ocean_scene" parent="." unique_id=202505749 instance=ExtResource("1_neqh2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22356617, 0, 1.6827534)
@@ -98,6 +108,15 @@ extra_cull_margin = 13532.69
 mesh = SubResource("SphereMesh_j2o6x")
 skin = SubResource("Skin_qby1c")
 script = ExtResource("6_nnn6b")
+wave_cntrl = 10.0
+ocean_width = null
+ocean_depth = null
+fish_count = null
+bubble_count = null
+plankton_count = null
+swim_speed = null
+sway_seed_speed = null
+bubble_speed = null
 metadata/gdshader = ExtResource("7_hr5cw")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=804021015]
