@@ -1,4 +1,4 @@
-#WID(10/11/2026)(Sarthak Mittal)(DegamieSign)(Ocean#water#script)
+#WID(11/11/2026)(Sarthak Mittal)(DegamieSign)(Ocean#water#script)
 extends MeshInstance3D
 
 @export var wave_cntrl:float=50.0
@@ -22,6 +22,8 @@ var seaweed_data: Array = []
 var plankton_data: Array = []
 
 var elapsed_time:=0.0
+func _process(delta:flaot)->void:
+	elapsed_time+=delta
 func animate_plankton()->void:
 	particle.scale=Vector3.ONE(.7+glow*1.0)
 func _ready()->void:
