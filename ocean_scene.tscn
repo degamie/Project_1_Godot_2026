@@ -85,6 +85,7 @@ anisotropy_enabled = true
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_kirxa"]
 
 [node name="Ocean_scene" type="Node3D" unique_id=1256360419]
+top_level = true
 script = ExtResource("6_nnn6b")
 wave_cntrl = null
 is_wave_moving = null

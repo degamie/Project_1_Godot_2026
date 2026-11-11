@@ -22,9 +22,12 @@ var seaweed_data: Array = []
 var plankton_data: Array = []
 
 var elapsed_time:=0.0
+func animate_plankton()->void:
+	particle.scale=Vector3.ONE(.7+glow*1.0)
 func _ready()->void:
 	create_ocean_environment()
 	create_camera()
+	create_ocean_flooar()
 func increase_wave_moving(is_wave_moving:bool)->bool:
 	is_wave_moving=true;return is_wave_moving
 
@@ -34,6 +37,17 @@ func wave_increase_number(wave_cntrl:float,is_wave_moving:bool)->float:
 		else: wave_cntrl=0
 	
 	return wave_cntrl
+	
+func create_ocean_flooar()->void:
+		var floor := MeshInstance3D.new();var plane := PlaneMesh.new()
+		
+		plane.size = Vector2(ocean_width, ocean_width)
+		floor.mesh = plane
+		floor.position = Vector3(0, -5, 0)
+		floor.material_override = create_material(
+		Color(0.025, 0.065, 0.09)
+	)
+		add_child(floor)
 
 func create_ocean_environment() -> void:
 	var world_env := WorldEnvironment.new()
