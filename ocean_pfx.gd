@@ -1,6 +1,7 @@
+#WID(13/11/2026)(Sarthak Mittal)(Ocean#pfx#1)
 extends GPUParticles3D
 
-
+@export var amount:float:=100
 func _ready() -> void:
 	amount = 800
 	lifetime = 8.0
