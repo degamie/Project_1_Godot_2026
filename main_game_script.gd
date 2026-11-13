@@ -12,9 +12,11 @@ const MAP_SCENES:Dictionary={
 }
 var current_map_scene:worldmapscript
 
-func set_current_map_scene(current_map_scene:worldmapscript)->worldmapscript:
-	this.current_map_scene=current_map_scene
-@export_category(map_control:String)
+#func set_current_map_scene(current_map_scene:worldmapscript)->worldmapscript:
+	#this.current_map_scene=current_map_scene
+#@export_category(map_control:String)
 @onready var map_container:Node3D=$WorldRoot/MapContainer
 @onready var map_view:Viewport=$WorldRoot/Viewport
 @onready var location_lablel:Label=$UILayerHUD/Location
+
+@export var map_grid:Array=map_container

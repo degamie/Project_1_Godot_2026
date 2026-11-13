@@ -1,6 +1,7 @@
-#WID(10/11/2026)(Sarthak Mittal(DegamieSign)(NarSimha(action))
+#WID(12/11/2026)(Sarthak Mittal(DegamieSign)(NarSimha(action))
 extends CharacterBody3D
 @onready var bitezone:Area3D=$MouthBiteZone
+@export var bite_area:float=10.0
 @export var hunger_restore:float=20.0
 @export var bite_damage: float = 50.0
 var current_hunger: float = 100.0

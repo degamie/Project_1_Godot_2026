@@ -17,7 +17,7 @@ resource_local_to_scene = true
 render_priority = 10
 next_pass = SubResource("ParticleProcessMaterial_qby1c")
 transparency = 2
-alpha_scissor_threshold = 0.5
+alpha_scissor_threshold = 0.765
 alpha_antialiasing_mode = 2
 alpha_antialiasing_edge = 1.0
 cull_mode = 1
@@ -87,37 +87,26 @@ anisotropy_enabled = true
 [node name="Ocean_scene" type="Node3D" unique_id=1256360419]
 top_level = true
 script = ExtResource("6_nnn6b")
-wave_cntrl = null
-is_wave_moving = null
-ocean_width = null
-ocean_depth = null
-fish_count = null
-bubble_count = null
-plankton_count = null
-swim_speed = null
-sway_seed_speed = null
-bubble_speed = null
 
 [node name="Ocean_scene" parent="." unique_id=202505749 instance=ExtResource("1_neqh2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22356617, 0, 1.6827534)
 top_level = true
 
 [node name="Ocean_water" type="MeshInstance3D" parent="Ocean_scene" unique_id=1414508758]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004838228, 2.1587799, -0.002471447)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.043351054, 2.6187758, -0.002471447)
 material_override = SubResource("StandardMaterial3D_j2o6x")
 extra_cull_margin = 13532.69
 mesh = SubResource("SphereMesh_j2o6x")
 skin = SubResource("Skin_qby1c")
 script = ExtResource("6_nnn6b")
-wave_cntrl = 10.0
-ocean_width = null
-ocean_depth = null
-fish_count = null
-bubble_count = null
-plankton_count = null
-swim_speed = null
-sway_seed_speed = null
-bubble_speed = null
+wave_cntrl = 100.0
+ocean_width = 10.0
+fish_count = 5
+bubble_count = 25
+plankton_count = 10
+swim_speed = 10.0
+sway_seed_speed = 15.0
+bubble_speed = 12.0
 metadata/gdshader = ExtResource("7_hr5cw")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=804021015]
