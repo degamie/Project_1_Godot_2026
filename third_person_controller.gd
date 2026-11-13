@@ -1,4 +1,4 @@
-# WID(8/11/2026)Sarthak Mittal | DegamieSign
+# WID(13/11/2026)Sarthak Mittal | DegamieSign
 # ThirdPersonController(binding#mouse_captured)#1.1
 
 extends CharacterBody3D
@@ -11,6 +11,18 @@ extends CharacterBody3D
 @export var can_jump: bool = true
 @export var can_E: bool = true
 @export var can_talk:bool=true
+@export var has_gravity_cnt:float=10.0
+func has_gravity_presnet(has_gravity: bool)->bool:
+	has_gravity=true
+func has_jump(can_jump:bool)->bool:
+	can_jump=true
+
+func is_cam_run(cam_run: bool)->bool:
+	cam_run=true
+func multiply_gravity_cnt(has_gravity_cnt:float)->float:
+	has_gravity_cnt*=1;
+func increase_gravity_cnt(has_gravity_cnt:float)->float:
+	has_gravity_cnt+=1;
 func is_gravity(has_gravity: bool)->bool:
 	is_gravity=true
 func update_can_talk(can_talk:bool)->bool:
@@ -26,6 +38,14 @@ func update_can_talk(can_talk:bool)->bool:
 @export var slide_jump: float = 7.9
 @export var long_jump: float = 9.9
 @export var turn_speed: float = 12.0
+func switft_jump_cnt(swift_jump: float )->float:
+	swift_jump+=1
+@export_group("Walking Accuracy")
+var walk_num:float=10.0
+func increment_walk_num(walk_num:float)->float:
+	walk_num+=1;
+func set_base_speed(base_speed: float)->float:
+	this.base_speed=base_speed
 func is_orchestrator(orchestrator: bool)->bool:
 	orchestrator=true
 func increase_jump_velocity(jump_velocity: float)->float:
@@ -47,6 +67,10 @@ func increase_turn_speed(turn_speed: float)->float:
 @export var min_pitch_deg: float = -60.0
 @export var max_pitch_deg: float = 61.5
 @export var max_cam_rot_angle:float=60
+func increase_mouse_sensitivity(mouse_sensitivity: float)->float:
+	mouse_sensitivity+=1;
+return mouse_sensitivity;
+	
 func is_moving(can_move;bool)->bool:
 	can_move=true;
 func detect_mouse_sensitivity(mouse_sensitivity: float)->float:
