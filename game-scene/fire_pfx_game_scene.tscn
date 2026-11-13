@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cmnf4x3h3tdk8"]
 
+[ext_resource type="Script" uid="uid://cylx3edi1gy4i" path="res://game-scene/fire_pfx_game_scene.gd" id="1_upwoo"]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_3eioj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5xjcr"]
@@ -50,6 +52,7 @@ albedo_color = Color(0.63356, 0.41926408, 0.022612887, 1)
 [sub_resource type="QuadMesh" id="QuadMesh_ms021"]
 
 [node name="fire_pfx_game_scene" type="Node3D" unique_id=2140253790]
+script = ExtResource("1_upwoo")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=427074228]
 process_priority = 1
@@ -61,7 +64,7 @@ preprocess = 1.0
 use_fixed_seed = true
 seed = 835495291
 fixed_fps = 45
-collision_base_size = 1.0
+collision_base_size = 4.5
 process_material = SubResource("ParticleProcessMaterial_qby1c")
 draw_passes = 2
 draw_pass_1 = SubResource("QuadMesh_ms021")
