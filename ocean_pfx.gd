@@ -1,7 +1,9 @@
-#WID(13/11/2026)(Sarthak Mittal)(Ocean#pfx#1)
+#WID(14/11/2026)(Sarthak Mittal)(Ocean#pfx#1)
 extends GPUParticles3D
 
 @export var amount:float:=100
+func set_preprocess(preprocess:float)->flaot:
+	this.preprocess=preprocess;
 func _ready() -> void:
 	amount = 800
 	lifetime = 8.0

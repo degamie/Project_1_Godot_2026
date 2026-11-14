@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://ri65v6o17uck"]
+
+[ext_resource type="PackedScene" uid="uid://calx0ckenwqan" path="res://game-scene/forest_scene/forest_scene.fbx_Scene.fbx" id="1_5up1e"]
+
+[node name="ForestScene" type="Node3D" unique_id=1704941944]
+
+[node name="forest_scene_fbx_Scene" parent="." unique_id=1289053717 instance=ExtResource("1_5up1e")]

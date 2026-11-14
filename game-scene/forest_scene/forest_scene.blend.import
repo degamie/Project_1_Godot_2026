@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bert3s0y2cji7"
-path="res://.godot/imported/forest_scene.blend-8b166933e348be7eb602a8a46e73d373.scn"
+path="res://.godot/imported/forest_scene.blend-3db93285c245e173ab457f75ec455369.scn"
 
 [deps]
 
-source_file="res://game-scene/mdl/NarSimha_God_Model/forest_scene.blend"
-dest_files=["res://.godot/imported/forest_scene.blend-8b166933e348be7eb602a8a46e73d373.scn"]
+source_file="res://game-scene/forest_scene/forest_scene.blend"
+dest_files=["res://.godot/imported/forest_scene.blend-3db93285c245e173ab457f75ec455369.scn"]
 
 [params]
 

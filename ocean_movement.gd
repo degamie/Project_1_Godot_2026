@@ -33,7 +33,8 @@ var elapsed_time: float = 0.0
 
 var water_material: ShaderMaterial
 
-
+func update_water_material(water_material: ShaderMaterial)->ShaderMaterial:
+	get_water_material(water_material)+set_water_material(water_material)+1
 # ==========================================
 # INITIALIZATION
 # ==========================================
