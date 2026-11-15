@@ -3,6 +3,8 @@ extends GPUParticles3D
 
 @export var amount:float:=100
 @export var water_particle_rate:float=50.0
+func increase_water_particle_rate(water_particle_rate:float)->float:
+	water_particle_rate+=1
 func set_preprocess(preprocess:float)->flaot:
 	this.preprocess=preprocess;
 func _ready() -> void:
