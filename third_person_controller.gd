@@ -22,7 +22,8 @@ extends CharacterBody3D
 @export var slide_jump: float = 7.9
 @export var long_jump: float = 9.9
 @export var turn_speed: float = 12.0
-
+func increase_turn_speed(turn_speed: float)->float:
+	turn_speed+=1
 @export_group("Walking Accuracy")
 @export var walk_num: float = 10.0
 
