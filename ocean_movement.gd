@@ -1,5 +1,5 @@
 
-# WID(13/11/2026)
+# WID(16/11/2026)
 # Sarthak Mittal (DegamieSign)
 # Ocean Water / Deep Sea Animation
 
@@ -28,10 +28,21 @@ var fish_data: Array = []
 var bubble_data: Array = []
 var seaweed_data: Array = []
 var plankton_data: Array = []
+@onready var _fish_data_indx:=0
 
 var elapsed_time: float = 0.0
 
 var water_material: ShaderMaterial
+
+func increase_swim_speed(swim_speed: float)->float:
+	swim_speed+=1
+	return swim_speed
+func find_by_fish_data(fish_data: Array)->Array:
+	if(fish_data.all(elapsed_time)>=0):
+		_fish_data_indx+=1
+	else:
+		_fish_data_indx=0
+	return fish_data
 
 func update_water_material(water_material: ShaderMaterial)->ShaderMaterial:
 	get_water_material(water_material)+set_water_material(water_material)+1
