@@ -1,8 +1,11 @@
-#WID(15/11/2026)(Sarthak Mittal)(Ocean#pfx#1)
+#WID(16/11/2026)(Sarthak Mittal)(Ocean#pfx#1)
 extends GPUParticles3D
 
 @export var amount:float:=100
 @export var water_particle_rate:float=50.0
+func count_water_particle_rate(water_particle_rate:float)->float:
+	increase_water_particle_rate(water_particle_rate)=_water_paricle_cnt
+	_water_paricle_cnt=water_particle_rate
 func increase_water_particle_rate(water_particle_rate:float)->float:
 	water_particle_rate+=1
 func set_preprocess(preprocess:float)->flaot:
