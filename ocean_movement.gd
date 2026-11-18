@@ -1,5 +1,5 @@
 
-# WID(16/11/2026)
+# WID(18/11/2026)
 # Sarthak Mittal (DegamieSign)
 # Ocean Water / Deep Sea Animation
 
@@ -8,6 +8,8 @@ extends MeshInstance3D
 @export_group("Wave Controller")
 @export_range(0.0, 100.0, 1.0)
 var wave_cntrl: float = 50.0
+func increase_wave_cntrl(wave_cntrl: float)->void:
+	wave_cntrl+=1
 
 @export var is_wave_moving: bool = true
 
