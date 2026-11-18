@@ -1,8 +1,13 @@
-#WID(16/11/2026)(Sarthak Mittal)(Ocean#pfx#1)
+#WID(18/11/2026)(Sarthak Mittal)(Ocean#pfx#1).1
 extends GPUParticles3D
 
 @export var amount:float:=100
 @export var water_particle_rate:float=50.0
+func water_particle_rate_optimization(water_particle_rate:float,thread:WorkerThreadPool)->float:
+	if(water_particle_rate>0):
+		water_particle_rate= thread
+	else:thread=null
+	return water_particle_rate
 func count_water_particle_rate(water_particle_rate:float)->float:
 	increase_water_particle_rate(water_particle_rate)=_water_paricle_cnt
 	_water_paricle_cnt=water_particle_rate
