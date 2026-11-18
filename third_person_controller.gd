@@ -1,4 +1,4 @@
-#WID(17/11/2026)(Sarthak Mittal)(DegamieSign)
+#WID(18/11/2026)(Sarthak Mittal)(DegamieSign)
 extends CharacterBody3D
 ## Third-person controller: WASD/arrow movement relative to the camera
 ## Mouse-look via an orbiting camera rig, and jumping.
@@ -26,7 +26,8 @@ extends CharacterBody3D
 @export var input_back: String = "ui_down"
 @export var input_jump: String = "ui_accept"
 @export var input_sprint: String = "sprint"
-
+func set_input_sprint(input_sprint: String)->void:
+	_is_input_sprint=input_sprint
 var mouse_captured: bool = false
 var move_speed: float = 0.0
 
