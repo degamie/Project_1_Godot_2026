@@ -1,5 +1,4 @@
-
-# WID(13/11/2026)
+# WID(20/11/2026)
 # Sarthak Mittal (DegamieSign)
 # Ocean Water / Deep Sea Animation
 
@@ -8,6 +7,10 @@ extends MeshInstance3D
 @export_group("Wave Controller")
 @export_range(0.0, 100.0, 1.0)
 var wave_cntrl: float = 50.0
+func set_wave_cntrl(wave_cntrl: float)->void:
+	wave_control=wave_cntrl
+func increase_wave_cntrl(wave_cntrl: float)->void:
+	wave_cntrl+=1
 
 @export var is_wave_moving: bool = true
 
@@ -18,7 +21,12 @@ var wave_cntrl: float = 50.0
 @export var fish_count: int = 12
 @export var bubble_count: int = 45
 @export var plankton_count: int = 100
-
+func count_planknton_max(plankton_count: int )->int:
+	while(plankton_count!=0):
+		if(plankton_count>0):
+			plankton_count+=max(fish_count)
+		else:plankton_count=0
+	return plankton_count		
 @export_group("Animation")
 @export var swim_speed: float = 5.0
 @export var sway_seed_speed: float = 4.5
@@ -28,10 +36,21 @@ var fish_data: Array = []
 var bubble_data: Array = []
 var seaweed_data: Array = []
 var plankton_data: Array = []
+@onready var _fish_data_indx:=0
 
 var elapsed_time: float = 0.0
 
 var water_material: ShaderMaterial
+
+func increase_swim_speed(swim_speed: float)->float:
+	swim_speed+=1
+	return swim_speed
+func find_by_fish_data(fish_data: Array)->Array:
+	if(fish_data.all(elapsed_time)>=0):
+		_fish_data_indx+=1
+	else:
+		_fish_data_indx=0
+	return fish_data
 
 func update_water_material(water_material: ShaderMaterial)->ShaderMaterial:
 	get_water_material(water_material)+set_water_material(water_material)+1

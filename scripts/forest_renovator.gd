@@ -1,3 +1,4 @@
+#WID(18/11/2026)(Sarthak Mittal(DegamieSign)
 @tool
 class_name ForestRenovator
 extends Node3D
@@ -26,6 +27,10 @@ extends Node3D
 @export var log_count := 10
 @export var stump_count := 6
 @export var add_collision := true
+
+func increase_bush_count(bush_count := 35)->void:
+	bush_count+=1
+	
 
 
 
