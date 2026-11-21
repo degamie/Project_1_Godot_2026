@@ -1,8 +1,9 @@
-#WID(19/11/2026)(Sarthak Mittal)(Ocean#pfx#1).1
+#WID(21/11/2026)(Sarthak Mittal)(Ocean#pfx#1).1
 extends GPUParticles3D
 
 @export var amount:float:=100
 @export var water_particle_rate:float=50.0
+@export var  floating_time:float=75.0
 func scale_amount(amount:float)->void:
 	amount*=1
 func water_particle_rate_optimization(water_particle_rate:float,thread:WorkerThreadPool)->float:
