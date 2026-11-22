@@ -1,4 +1,4 @@
-#WID(18/11/2026)(Sarthak Mittal(DegamieSign)
+#WID(21/11/2026)(Sarthak Mittal(DegamieSign)
 @tool
 class_name ForestRenovator
 extends Node3D
@@ -32,7 +32,8 @@ func increase_bush_count(bush_count := 35)->void:
 	bush_count+=1
 	
 
-
+func create_fog_mist_volume(pos:Vector3,volume_size:Vector3)->void:
+	#Code to be continued
 
 
 @export var rebuild := false:

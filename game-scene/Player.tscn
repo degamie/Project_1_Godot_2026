@@ -1,40 +1,1 @@
-[gd_scene format=3 uid="uid://ds0oo3shm8tvv"]
-
-[ext_resource type="Script" uid="uid://blj2qamvc7dbq" path="res://src/third_person_controller.gd" id="1_mp36r"]
-[ext_resource type="PackedScene" uid="uid://bmrt36kxve1q0" path="res://game-scene/mdl/Praladha_mdl_alpha.fbx" id="2_o6fqq"]
-
-[sub_resource type="CapsuleShape3D" id="PlayerCapsule"]
-radius = 0.4
-height = 1.8
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_o6fqq"]
-resource_local_to_scene = true
-
-[node name="Player" type="CharacterBody3D" unique_id=1097412986]
-safe_margin = 0.015
-script = ExtResource("1_mp36r")
-
-[node name="CameraPivot" type="Node3D" parent="." unique_id=455197275]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
-
-[node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot" unique_id=971108731]
-transform = Transform3D(-1, 2.262668e-08, -8.444392e-08, 0, 0.9659258, 0.25881904, 8.742278e-08, 0.25881904, -0.9659258, 0, 0, 0)
-spring_length = 4.5
-
-[node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D" unique_id=1831444819]
-current = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1068128706]
-transform = Transform3D(1.9054178, 0, 0, 0, 1.1901523, 0, 0, 0, 1.9878675, -0.028303742, 0.7213107, 0)
-shape = SubResource("PlayerCapsule")
-
-[node name="CharacterModel" type="MeshInstance3D" parent="." unique_id=1937392900]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.28901887, 0.9, 0)
-top_level = true
-transparency = 1.0
-cast_shadow = 0
-mesh = SubResource("CapsuleMesh_o6fqq")
-
-[node name="Praladha_mdl_alpha" parent="CharacterModel" unique_id=817347016 instance=ExtResource("2_o6fqq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07795167, 0, 0)
-top_level = true
+//WID(21/11/2026)(Sarthak Mittal(DegamieSign)(GameView)import java.awt.BasicStroke;import java.awt.Color;import java.awt.Dimension;import java.awt.Font;import java.awt.FontMetrics;import java.awt.GradientPaint;import java.awt.Graphics;import java.awt.Graphics2D;import java.awt.RenderingHints;import java.awt.event.ActionEvent;import java.awt.event.KeyAdapter;import java.awt.event.KeyEvent;import java.awt.geom.RoundRectangle2D;import java.util.ArrayList;import java.util.Iterator;import java.util.List;import java.util.Random;import javax.swing.AbstractAction;import javax.swing.JFrame;import javax.swing.JPanel;import javax.swing.KeyStroke;import javax.swing.SwingUtilities;import javax.swing.Timer;public class GameView extends JPanel{    private static final int VIEW_WIDTH = 480;    private static final int VIEW_HEIGHT = 760;    private static final int LANE_COUNT = 3;    private static final int ROAD_WIDTH = 300;    private static final int ROAD_LEFT = (VIEW_WIDTH - ROAD_WIDTH) / 2;    private static final int LANE_WIDTH = ROAD_WIDTH / LANE_COUNT;    private static final int PLAYER_WIDTH = 46;    private static final int PLAYER_HEIGHT = 82;    private final Timer gameLoopTimer;    private final Random random = new Random();    private final List<TrafficCar> trafficCars = new ArrayList<>();    private final List<SceneryProp> sceneryProps = new ArrayList<>();    private long lastFrameNanos = System.nanoTime();    private double roadScrollOffset = 0.0;    private double spawnCooldown = 0.8;    private double propCooldown = 0.35;    private double playerX;    private double playerY;    private double baseSpeed = 340.0; // pixels per

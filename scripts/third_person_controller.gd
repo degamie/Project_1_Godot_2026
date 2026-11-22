@@ -1,12 +1,14 @@
-#WID(20/11/2026)(Sarthak Mittal)(DegamieSign)
+#WID(20/11/2026)(Sarthak Mittal)(DegamieSign)(jump#accuracy)
 extends CharacterBody3D
 ## Third-person controller: WASD/arrow movement relative to the camera
 ## Mouse-look via an orbiting camera rig, and jumping.
 
+@export_group("jump variances")
 @export var can_move: bool = true
 @export var has_gravity: bool = true
 @export var can_jump: bool = true
 @export var can_sprint: bool = true
+@export var jump_accuracy:float=10.0
 func increase_sprint(sprint_speed:float)->void:
 	sprint_speed+=1
 
