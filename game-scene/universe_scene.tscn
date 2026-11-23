@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ce2bffhqpknri"]
 
 [ext_resource type="PackedScene" uid="uid://colm8y8f7c6xk" path="res://game-scene/mdl/Universe_scene.blend" id="1_g2pe2"]
-[ext_resource type="Script" uid="uid://c5rnabbhawaid" path="res://galaxy_swirl_rotate.gd" id="2_rpyyb"]
+[ext_resource type="Script" uid="uid://c5rnabbhawaid" path="res://universe_scene.gd" id="2_rpyyb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lnu2k"]
 albedo_color = Color(0.12811512, 0.4894076, 0.5269708, 1)
@@ -9,6 +9,12 @@ albedo_color = Color(0.12811512, 0.4894076, 0.5269708, 1)
 [node name="Universe_scene" unique_id=1640848829 instance=ExtResource("1_g2pe2")]
 transform = Transform3D(1, 0, 0, 0, 0.99824375, -0.05924024, 0, 0.05924024, 0.99824375, 0, 0, 0)
 script = ExtResource("2_rpyyb")
+universe_radius = null
+stars_cnt = null
+universe_speed = null
+core_radius = null
+core_glow_energy = null
+planet_count = null
 
 [node name="Brahmanda_Core_Orb" parent="Mahavatar_Brahmanda_Root" parent_id_path=PackedInt32Array(2008882007) index="0" unique_id=980410650]
 transform = Transform3D(0.9781476, -0.2008272, 0.053811498, 0.20791166, 0.9448179, -0.25316316, -1.1175871e-08, 0.258819, 0.96592563, 0, 0, 0)

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dmeujksxshy8g"]
 
+[ext_resource type="Script" uid="uid://c5rnabbhawaid" path="res://universe_scene.gd" id="1_ol24e"]
 [ext_resource type="Script" uid="uid://cq544q2px8pii" path="res://addons/orchestrator/scenes/dialogue_message.gd" id="1_onkyh"]
 [ext_resource type="Texture2D" uid="uid://bwirol4mbk68r" path="res://game-scene/Skybbox/Universe_image_game_scene.jpg" id="2_ol24e"]
 
@@ -17,6 +18,7 @@ glow_hdr_scale = 4.0
 [sub_resource type="Compositor" id="Compositor_dfuki"]
 
 [node name="Universe" type="Node3D" unique_id=903247539]
+script = ExtResource("1_ol24e")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=595491161]
 process_priority = 1
