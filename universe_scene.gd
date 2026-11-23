@@ -1,4 +1,4 @@
-#WID(23/11/2026)(Sarthak Mittal(DegamieSign)(Universe Scene)
+#WID(23/11/2026)(Sarthak Mittal(DegamieSign)(Universe Scene)(Nebula and Lighting)
 extends Node3D
 
 @export_group("Universe Settings")
@@ -23,10 +23,12 @@ var core: Node3D
 func _ready()->void:
 	rng.randomize()
 	universe_root=Node3D.new()
-	#create_camera()
-	#create_cosmic_lighting()
-	#create_divine_energy()
 	create_nebula()
+	create_cosmic_lighting()
+	#create_camera()
+
+	#create_divine_energy()
+	
 	#create_starfield()
 	#create_universe()
 	
@@ -48,16 +50,34 @@ func create_nebula()->void:
 	for i in range(28):
 		var nebula := MeshInstance3D.new()
 		nebula.name = "NebulaCloud_%02d" % i
+		
+		var mesh:=SphereMesh.new()
+		mesh.radius=1.0 
+		mesh.height=2.7 
+		nebula.mesh=mesh
+	var material := StandardMaterial3D.new()
 	
-	var mesh:=SphereMesh.new()
-	mesh.radius=1.0
-	mesh.height=2.7 
-	
+	material.albedo_color = nebula_colors[
+			rng.randi_range(0, nebula_colors.size() - 1)
+		]
+	material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	material.emission_enabled = true
+	material.emission = material.albedo_color
+	material.emission_energy_multiplier = 1.5
+
+	nebula.material_override = material
+	nebula.position = random_sphere_position(universe_radius * 0.5)
+	nebula.scale = Vector3(
+			rng.randf_range(20.0, 60.0),
+			rng.randf_range(8.0, 30.0),
+			rng.randf_range(20.0, 60.0)
+		 )
+		universe_root.add_child(nebula)
+
+	func create_cosmic_lighting()->void:
+		var light=DirectionalLight3D.new()
 #func create_starfield()->void:
 	#
 #func create_universe()->void:
 	#
-#func create_cosmic_lighting()->void:
-
-
- 

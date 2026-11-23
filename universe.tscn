@@ -19,6 +19,12 @@ glow_hdr_scale = 4.0
 
 [node name="Universe" type="Node3D" unique_id=903247539]
 script = ExtResource("1_ol24e")
+universe_radius = null
+stars_cnt = null
+universe_speed = null
+core_radius = null
+core_glow_energy = null
+planet_count = null
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=595491161]
 process_priority = 1
