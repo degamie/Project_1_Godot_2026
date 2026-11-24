@@ -5,6 +5,8 @@ extends Node3D
 @export var universe_radius:float=370.0
 @export var stars_cnt:float=2100
 @export var universe_speed:float=.015
+func increase_universe_radius(universe_radius:float)->void:
+	universe_radius+=1
 func set_universe_speed(universe_speed:float)->void:
 	universe_speed=speed_of_universe
 var star_instance=MultiMeshInstance3D.new()
