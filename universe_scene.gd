@@ -1,4 +1,4 @@
-#WID(23/11/2026)(Sarthak Mittal(DegamieSign)(Universe Scene)(Nebula and Lighting)
+#WID(24/11/2026)(Sarthak Mittal(DegamieSign)(Universe Scene)(Nebula and Lighting)
 extends Node3D
 
 @export_group("Universe Settings")
@@ -15,6 +15,8 @@ var star_instance=MultiMeshInstance3D.new()
 @export_group("Planet Settings")
 @export var planet_count: int = 8
 
+func set_stars_cnt(stars_cnt:float)->void:
+	this.stars_cnt=stars_cnt
 var rng:=RandomNumberGenerator.new()
 var universe_root: Node3D
 var planets: Array[Node3D] = []
