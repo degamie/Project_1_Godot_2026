@@ -1,10 +1,12 @@
-#WID(24/11/2026)(Sarthak Mittal(DegamieSign)(Universe Scene)(Nebula and Lighting)
+#WID(25/11/2026)(Sarthak Mittal(DegamieSign)(Universe Scene)(Nebula and Lighting)
 extends Node3D
 
 @export_group("Universe Settings")
 @export var universe_radius:float=370.0
 @export var stars_cnt:float=2100
 @export var universe_speed:float=.015
+func scale_universe_speed:float(universe_speed:float)->void:
+	universe_speed*=1
 func increase_universe_radius(universe_radius:float)->void:
 	universe_radius+=1
 func set_universe_speed(universe_speed:float)->void:
