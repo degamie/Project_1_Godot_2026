@@ -3,10 +3,15 @@
 # Ocean Water / Deep Sea Animation
 
 extends MeshInstance3D
-
+@export_group("Ocean Water Settings")
+@export var ocean_width: float = 35.0
+@export var ocean_depth: float = 22.0
+func set_ocean_width(ocean_width: float)->void:
+	ocean_width=width_of_ocean
 @export_group("Wave Controller")
 @export_range(0.0, 100.0, 1.0)
 var wave_cntrl: float = 50.0
+
 func increase_fish_count(fish_count: int)->void:
 	fish_count+=1
 func scale_wave_cntrl(wave_cntrl: float)->void:
@@ -18,9 +23,7 @@ func increase_wave_cntrl(wave_cntrl: float)->void:
 
 @export var is_wave_moving: bool = true
 
-@export_group("Ocean Water Settings")
-@export var ocean_width: float = 35.0
-@export var ocean_depth: float = 22.0
+
 func increase_ocean_depth(ocean_depth: float)->void:
 	ocean_depth+=1
 @export var fish_count: int = 12
