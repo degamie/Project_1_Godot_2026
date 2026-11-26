@@ -1,4 +1,4 @@
-#WID(25/11/2026)(Sarthak Mittal(DegamieSign)(Universe Scene)(Nebula and Lighting)
+#WID(25/11/2026)(Sarthak Mittal(DegamieSign)(Universe Scene)(Star field Creation)
 extends Node3D
 
 @export_group("Universe Settings")
@@ -7,8 +7,8 @@ extends Node3D
 @export var universe_speed:float=.015
 func increase_stars_cnt(stars_cnt:float)->void:
 	stars_cnt+=1
-func scale_universe_speed:float(universe_speed:float)->void:
-	universe_speed*=1
+#func scale_universe_speed:float(universe_speed:float)->void:
+	#universe_speed*=1
 func increase_universe_radius(universe_radius:float)->void:
 	universe_radius+=1
 func set_universe_speed(universe_speed:float)->void:
@@ -22,6 +22,12 @@ var star_instance=MultiMeshInstance3D.new()
 @export_group("Planet Settings")
 @export var planet_count: int = 8
 
+func create_star_field()->void:
+	var star_mesh=SpriteMesh.new()
+	star_mesh.radius=.35
+	star_mesh.height=.45
+	
+	
 func set_stars_cnt(stars_cnt:float)->void:
 	this.stars_cnt=stars_cnt
 var rng:=RandomNumberGenerator.new()
@@ -38,7 +44,7 @@ func _ready()->void:
 
 	#create_divine_energy()
 	
-	#create_starfield()
+	create_star_field()
 	#create_universe()
 	
 	add_child(universe_root)
