@@ -1,10 +1,12 @@
-#WID(25/11/2026)(Sarthak Mittal(DegamieSign)(Universe Scene)(Star field Creation)
+#WID(27/11/2026)(Sarthak Mittal(DegamieSign)(Universe Scene)(Star field Creation)
 extends Node3D
 
 @export_group("Universe Settings")
 @export var universe_radius:float=370.0
 @export var stars_cnt:float=2100
 @export var universe_speed:float=.015
+func set_universe_radius(universe_radius:float)->void:
+	radius_of_universe=universe_radius
 func increase_stars_cnt(stars_cnt:float)->void:
 	stars_cnt+=1
 #func scale_universe_speed:float(universe_speed:float)->void:
