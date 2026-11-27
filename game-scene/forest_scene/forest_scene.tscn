@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://ri65v6o17uck"]
 
 [ext_resource type="PackedScene" uid="uid://calx0ckenwqan" path="res://game-scene/forest_scene/forest_scene.fbx_Scene.fbx" id="1_5up1e"]
+[ext_resource type="Script" uid="uid://cc1w8j0bq8c8f" path="res://scripts/forest_renovator.gd" id="1_75eym"]
 
 [node name="ForestScene" type="Node3D" unique_id=1704941944]
+script = ExtResource("1_75eym")
 
 [node name="forest_scene_fbx_Scene" parent="." unique_id=1289053717 instance=ExtResource("1_5up1e")]

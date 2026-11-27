@@ -1,4 +1,4 @@
-#WID(21/11/2026)(Sarthak Mittal(DegamieSign)
+#WID(27/11/2026)(Sarthak Mittal(DegamieSign)
 @tool
 class_name ForestRenovator
 extends Node3D
@@ -19,7 +19,9 @@ extends Node3D
 @export_range(0, 80000) var grass_count := 25000
 @export var grass_base_color := Color(0.10, 0.33, 0.07)
 @export var grass_tip_color := Color(0.42, 0.78, 0.22)
-@export var wind_strength := 0.18
+@export var wind_strength :float= 0.18
+func increase_wind_strength(wind_strength :float)->void:
+	strength_of_wind=wind_strength
 
 @export_group("Trees, Logs & Foliage")
 @export var x := 22.0
