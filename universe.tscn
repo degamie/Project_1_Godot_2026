@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://c5rnabbhawaid" path="res://universe_scene.gd" id="1_ol24e"]
 [ext_resource type="Script" uid="uid://cq544q2px8pii" path="res://addons/orchestrator/scenes/dialogue_message.gd" id="1_onkyh"]
 [ext_resource type="Texture2D" uid="uid://bwirol4mbk68r" path="res://game-scene/Skybbox/Universe_image_game_scene.jpg" id="2_ol24e"]
+[ext_resource type="PackedScene" uid="uid://ckkmo5j1s0pma" path="res://game-scene/mdl/Universe_scene/Universe_scene.fbx_Scene_Scene_Collection/Universe_scene.fbx_Scene_Scene_Collection.fbx" id="4_e2blk"]
+[ext_resource type="PackedScene" uid="uid://denif7su8h8u4" path="res://game-scene/mdl/Universe_scene/Universe_scene.fbx_Collection/Universe_scene.fbx_Collection.fbx" id="5_d0y5q"]
 
 [sub_resource type="Environment" id="Environment_j2o6x"]
 ssr_enabled = true
@@ -19,12 +21,6 @@ glow_hdr_scale = 4.0
 
 [node name="Universe" type="Node3D" unique_id=903247539]
 script = ExtResource("1_ol24e")
-universe_radius = null
-stars_cnt = null
-universe_speed = null
-core_radius = null
-core_glow_energy = null
-planet_count = null
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=595491161]
 process_priority = 1
@@ -50,3 +46,7 @@ omni_shadow_mode = 0
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer" unique_id=2053231782]
 follow_viewport_enabled = true
+
+[node name="Universe_scene_fbx_Scene_Scene_Collection" parent="." unique_id=533981713 instance=ExtResource("4_e2blk")]
+
+[node name="Universe_scene_fbx_Collection" parent="." unique_id=1825048376 instance=ExtResource("5_d0y5q")]

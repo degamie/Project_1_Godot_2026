@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://dqrrbukqddidw"]
+
+[ext_resource type="Script" uid="uid://c5rnabbhawaid" path="res://universe_scene.gd" id="1_ol24e"]
+[ext_resource type="Script" uid="uid://cq544q2px8pii" path="res://addons/orchestrator/scenes/dialogue_message.gd" id="1_onkyh"]
+[ext_resource type="Texture2D" uid="uid://bwirol4mbk68r" path="res://game-scene/Skybbox/Universe_image_game_scene.jpg" id="2_ol24e"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sky"]
+
+[sub_resource type="Sky" id="Sky_cosmic"]
+sky_material = SubResource("ShaderMaterial_sky")
+
+[sub_resource type="Environment" id="Environment_j2o6x"]
+background_mode = 2
+sky = SubResource("Sky_cosmic")
+ambient_light_source = 3
+ambient_light_energy = 0.5
+tonemap_mode = 3
+ssr_enabled = true
+ssr_fade_in = 0.64306456
+ssao_enabled = true
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 0.9
+glow_bloom = 0.08
+glow_blend_mode = 2
+glow_hdr_scale = 4.0
+fog_enabled = true
+fog_light_color = Color(0.25, 0.08, 0.5, 1)
+fog_density = 0.0015
+fog_sky_affect = 0.3
+adjustment_enabled = true
+adjustment_contrast = 1.05
+adjustment_saturation = 1.15
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_qby1c"]
+
+[sub_resource type="Compositor" id="Compositor_dfuki"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_motes"]
+emission_shape = 3
+emission_box_extents = Vector3(90, 40, 90)
+direction = Vector3(0, 1, 0)
+spread = 35.0
+initial_velocity_min = 0.3
+initial_velocity_max = 1.2
+gravity = Vector3(0, 0.15, 0)
+scale_min = 0.4
+scale_max = 1.2
+color = Color(1, 0.8, 0.4, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mote"]
+shading_mode = 0
+albedo_color = Color(1, 0.85, 0.5, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_mote"]
+material = SubResource("StandardMaterial3D_mote")
+radius = 0.06
+height = 0.12
+radial_segments = 6
+rings = 3
+
+[node name="Universe" type="Node3D" unique_id=903247539]
+script = ExtResource("1_ol24e")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=595491161]
+process_priority = 1
+process_physics_priority = 1
+environment = SubResource("Environment_j2o6x")
+camera_attributes = SubResource("CameraAttributesPractical_qby1c")
+compositor = SubResource("Compositor_dfuki")
+script = ExtResource("1_onkyh")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=820539531]
+process_priority = 1
+process_physics_priority = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 74.48537, 0)
+light_color = Color(1, 0.7, 0.3, 1)
+light_energy = 2.5
+light_projector = ExtResource("2_ol24e")
+light_specular = 12.364
+shadow_enabled = true
+shadow_transmittance_bias = 11.05
+omni_shadow_mode = 0
+
+[node name="DivineMotes" type="GPUParticles3D" parent="." unique_id=1444821209]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
+amount = 350
+lifetime = 14.0
+visibility_aabb = AABB(-120, -60, -120, 240, 120, 240)
+process_material = SubResource("ParticleProcessMaterial_motes")
+draw_pass_1 = SubResource("SphereMesh_mote")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2022230148]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer" unique_id=2053231782]
+follow_viewport_enabled = true

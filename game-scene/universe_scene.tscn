@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://colm8y8f7c6xk" path="res://game-scene/mdl/Universe_scene.blend" id="1_g2pe2"]
 [ext_resource type="Script" uid="uid://c5rnabbhawaid" path="res://universe_scene.gd" id="2_rpyyb"]
+[ext_resource type="Script" uid="uid://cq544q2px8pii" path="res://addons/orchestrator/scenes/dialogue_message.gd" id="3_rpyyb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lnu2k"]
 albedo_color = Color(0.12811512, 0.4894076, 0.5269708, 1)
@@ -9,33 +10,33 @@ albedo_color = Color(0.12811512, 0.4894076, 0.5269708, 1)
 [node name="Universe_scene" unique_id=1640848829 instance=ExtResource("1_g2pe2")]
 transform = Transform3D(1, 0, 0, 0, 0.99824375, -0.05924024, 0, 0.05924024, 0.99824375, 0, 0, 0)
 script = ExtResource("2_rpyyb")
-universe_radius = null
-stars_cnt = null
-universe_speed = null
-core_radius = null
-core_glow_energy = null
-planet_count = null
+core_glow_energy = 10.0
 
-[node name="Brahmanda_Core_Orb" parent="Mahavatar_Brahmanda_Root" parent_id_path=PackedInt32Array(2008882007) index="0" unique_id=980410650]
-transform = Transform3D(0.9781476, -0.2008272, 0.053811498, 0.20791166, 0.9448179, -0.25316316, -1.1175871e-08, 0.258819, 0.96592563, 0, 0, 0)
+[node name="Mahavatar_Brahmanda_Root" parent="." index="0" unique_id=1478850426]
+script = ExtResource("2_rpyyb")
+stars_cnt = 2077
+
+[node name="Brahmanda_Core_Orb" parent="Mahavatar_Brahmanda_Root" index="0" unique_id=1393125170]
+transform = Transform3D(0.9781476, -0.2008272, 0.053811498, 0.20791166, 0.94481784, -0.25316316, -1.1175871e-08, 0.25881898, 0.9659256, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_lnu2k")
 
-[node name="Galaxy_Swirl_Pivot" parent="Mahavatar_Brahmanda_Root" parent_id_path=PackedInt32Array(2008882007) index="1" unique_id=835637323]
-transform = Transform3D(0.9781475, 0.08456525, -0.18993679, -0.20791167, 0.39784816, -0.89358246, -5.960464e-08, 0.9135456, 0.4067363, 0, 0, 0)
+[node name="Galaxy_Swirl_Pivot" parent="Mahavatar_Brahmanda_Root" index="1" unique_id=1424603413]
+transform = Transform3D(0.97814745, 0.08456525, -0.18993679, -0.20791166, 0.39784816, -0.89358246, -5.9604638e-08, 0.9135456, 0.4067363, 0, 0, 0)
 
-[node name="Cosmic_Spiral_Arm_0" parent="Mahavatar_Brahmanda_Root/Galaxy_Swirl_Pivot" index="0" unique_id=537909734]
+[node name="Cosmic_Spiral_Arm_0" parent="Mahavatar_Brahmanda_Root/Galaxy_Swirl_Pivot" index="0" unique_id=1428818788]
 transform = Transform3D(0.9873058, -0.11016038, -0.114419684, 0.15874206, 0.708439, 0.68768793, 0.0053033642, -0.6971217, 0.71693313, 0, 0, 0)
 
-[node name="Cosmic_Spiral_Arm_2" parent="Mahavatar_Brahmanda_Root/Galaxy_Swirl_Pivot" index="2" unique_id=595777540]
+[node name="Cosmic_Spiral_Arm_2" parent="Mahavatar_Brahmanda_Root/Galaxy_Swirl_Pivot" index="2" unique_id=285613693]
 transform = Transform3D(0.96561414, -0.12012258, -0.23056416, 0.25172022, 0.21022224, 0.9446922, -0.065009154, -0.97024584, 0.23323089, 0, 0, 0)
 
-[node name="Vedic_Celestial_Ring_0" parent="Mahavatar_Brahmanda_Root" parent_id_path=PackedInt32Array(2008882007) index="3" unique_id=1256988330]
-transform = Transform3D(0.9702956, 0.09062554, -0.22430608, -0.24192189, 0.36347872, -0.89964265, -1.1920928e-07, 0.9271838, 0.37460616, 0, 0, 0)
+[node name="Vedic_Celestial_Ring_0" parent="Mahavatar_Brahmanda_Root" index="3" unique_id=987950219]
+transform = Transform3D(0.97029555, 0.09062553, -0.22430608, -0.24192187, 0.3634787, -0.89964265, -1.19209275e-07, 0.92718375, 0.37460616, 0, 0, 0)
 
-[node name="Vedic_Celestial_Ring_1" parent="Mahavatar_Brahmanda_Root" parent_id_path=PackedInt32Array(2008882007) index="4" unique_id=393872634]
-transform = Transform3D(0.9510565, -0.08517668, 0.29704612, 0.30901694, 0.2621465, -0.91421413, 1.1920928e-07, 0.96126175, 0.27563712, 0, 0, 0)
+[node name="Vedic_Celestial_Ring_1" parent="Mahavatar_Brahmanda_Root" index="4" unique_id=368931478]
+transform = Transform3D(0.9510565, -0.08517668, 0.2970461, 0.30901694, 0.2621465, -0.9142141, 1.1920928e-07, 0.96126175, 0.2756371, 0, 0, 0)
 
-[node name="Vedic_Celestial_Ring_2" parent="Mahavatar_Brahmanda_Root" parent_id_path=PackedInt32Array(2008882007) index="5" unique_id=95507251]
+[node name="Vedic_Celestial_Ring_2" parent="Mahavatar_Brahmanda_Root" index="5" unique_id=383535253]
 transform = Transform3D(0.99026793, 0.06533788, -0.12288257, -0.13917314, 0.46490273, -0.87435466, -2.9802319e-08, 0.88294756, 0.46947154, 0, 0, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="2" unique_id=542771143]
+script = ExtResource("3_rpyyb")
