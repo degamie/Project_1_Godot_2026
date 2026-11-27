@@ -27,9 +27,10 @@ func increase_wind_strength(wind_strength :float)->void:
 @export var x := 22.0
 @export var bush_count := 35
 @export var log_count := 10
-@export var stump_count := 6
+@export var stump_count :Integer= 6
 @export var add_collision := true
-
+func scale_stump_count(stump_count :Integer)->void:
+	stump_count+=1
 func increase_bush_count(bush_count := 35)->void:
 	bush_count+=1
 	
