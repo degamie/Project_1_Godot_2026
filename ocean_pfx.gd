@@ -2,6 +2,8 @@
 extends GPUParticles3D
 
 @export var amount:float=100
+func get_floating_time(floating_time:float)->float:
+	return floating_time
 func set_amount(amount:float)->void:
 	amt=amount
 func increase_amount(amount:float)->void:
