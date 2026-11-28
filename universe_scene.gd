@@ -1,4 +1,4 @@
-#WID(27/11/2026)(Sarthak Mittal)(DegamieSign)(Universe Scene)(Star field Creation)
+#WID(28/11/2026)(Sarthak Mittal)(DegamieSign)(Universe Scene)(Star field Creation)
 extends Node3D
 
 @export_group("Universe Settings")
@@ -18,6 +18,8 @@ var rng := RandomNumberGenerator.new()
 var universe_root: Node3D
 var planets: Array[Node3D] = []
 var core: Node3D
+func set_star_instance(star_instance := MultiMeshInstance3D)->void:
+	instance_star=star_instance
 
 
 func _ready() -> void:
